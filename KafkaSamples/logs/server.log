@@ -1,0 +1,615 @@
+[2018-11-02 10:24:35,958] INFO Starting server (org.apache.zookeeper.server.ZooKeeperServerMain)
+[2018-11-02 10:24:35,969] INFO Server environment:zookeeper.version=3.4.13-2d71af4dbe22557fda74f9a9b4309b15a7487f03, built on 06/29/2018 00:39 GMT (org.apache.zookeeper.server.ZooKeeperServer)
+[2018-11-02 10:24:35,969] INFO Server environment:host.name=localhost (org.apache.zookeeper.server.ZooKeeperServer)
+[2018-11-02 10:24:35,969] INFO Server environment:java.version=1.8.0_181 (org.apache.zookeeper.server.ZooKeeperServer)
+[2018-11-02 10:24:35,969] INFO Server environment:java.vendor=Oracle Corporation (org.apache.zookeeper.server.ZooKeeperServer)
+[2018-11-02 10:24:35,970] INFO Server environment:java.home=/app/oracle/product/jdk/jre (org.apache.zookeeper.server.ZooKeeperServer)
+[2018-11-02 10:24:35,970] INFO Server environment:java.class.path=/home/oracle/jdeveloper/mywork/KafkaSamples/.adf:/home/oracle/jdeveloper/mywork/KafkaSamples/KafkaClient/classes:/app/opensource/confluent/share/java/kafka/kafka.jar:/app/opensource/confluent/share/java/kafka/kafka-clients-2.0.0-cp1.jar:/app/opensource/confluent/share/java/kafka/log4j-1.2.17.jar:/app/opensource/confluent/share/java/kafka/slf4j-log4j12-1.7.25.jar:/app/opensource/confluent/share/java/kafka/slf4j-api-1.7.25.jar:/app/opensource/confluent/share/java/kafka/kafka-log4j-appender-2.0.0-cp1.jar:/app/opensource/confluent/etc/kafka:/app/opensource/confluent/share/java/kafka/zookeeper-3.4.13.jar (org.apache.zookeeper.server.ZooKeeperServer)
+[2018-11-02 10:24:35,970] INFO Server environment:java.library.path=/usr/java/packages/lib/amd64:/usr/lib64:/lib64:/lib:/usr/lib (org.apache.zookeeper.server.ZooKeeperServer)
+[2018-11-02 10:24:35,970] INFO Server environment:java.io.tmpdir=/tmp (org.apache.zookeeper.server.ZooKeeperServer)
+[2018-11-02 10:24:35,970] INFO Server environment:java.compiler=<NA> (org.apache.zookeeper.server.ZooKeeperServer)
+[2018-11-02 10:24:35,970] INFO Server environment:os.name=Linux (org.apache.zookeeper.server.ZooKeeperServer)
+[2018-11-02 10:24:35,970] INFO Server environment:os.arch=amd64 (org.apache.zookeeper.server.ZooKeeperServer)
+[2018-11-02 10:24:35,970] INFO Server environment:os.version=4.1.12-112.16.4.el7uek.x86_64 (org.apache.zookeeper.server.ZooKeeperServer)
+[2018-11-02 10:24:35,971] INFO Server environment:user.name=oracle (org.apache.zookeeper.server.ZooKeeperServer)
+[2018-11-02 10:24:35,971] INFO Server environment:user.home=/home/oracle (org.apache.zookeeper.server.ZooKeeperServer)
+[2018-11-02 10:24:35,971] INFO Server environment:user.dir=/home/oracle/jdeveloper/mywork/KafkaSamples/KafkaClient (org.apache.zookeeper.server.ZooKeeperServer)
+[2018-11-02 10:24:35,979] INFO tickTime set to 3000 (org.apache.zookeeper.server.ZooKeeperServer)
+[2018-11-02 10:24:35,980] INFO minSessionTimeout set to -1 (org.apache.zookeeper.server.ZooKeeperServer)
+[2018-11-02 10:24:35,980] INFO maxSessionTimeout set to -1 (org.apache.zookeeper.server.ZooKeeperServer)
+[2018-11-02 10:24:35,989] INFO Using org.apache.zookeeper.server.NIOServerCnxnFactory as server connection factory (org.apache.zookeeper.server.ServerCnxnFactory)
+[2018-11-02 10:24:35,993] INFO binding to port 0.0.0.0/0.0.0.0:2181 (org.apache.zookeeper.server.NIOServerCnxnFactory)
+[2018-11-02 10:24:35,995] ERROR ZooKeeper Failed (nl.darwinit.demo.kafka.server.ZooKeeper)
+java.net.BindException: Address already in use
+	at sun.nio.ch.Net.bind0(Native Method)
+	at sun.nio.ch.Net.bind(Net.java:433)
+	at sun.nio.ch.Net.bind(Net.java:425)
+	at sun.nio.ch.ServerSocketChannelImpl.bind(ServerSocketChannelImpl.java:223)
+	at sun.nio.ch.ServerSocketAdaptor.bind(ServerSocketAdaptor.java:74)
+	at sun.nio.ch.ServerSocketAdaptor.bind(ServerSocketAdaptor.java:67)
+	at org.apache.zookeeper.server.NIOServerCnxnFactory.configure(NIOServerCnxnFactory.java:90)
+	at org.apache.zookeeper.server.ZooKeeperServerMain.runFromConfig(ZooKeeperServerMain.java:120)
+	at nl.darwinit.demo.kafka.server.ZooKeeper$1.run(ZooKeeper.java:43)
+[2018-11-02 10:25:13,034] INFO Starting server (org.apache.zookeeper.server.ZooKeeperServerMain)
+[2018-11-02 10:25:13,045] INFO Server environment:zookeeper.version=3.4.13-2d71af4dbe22557fda74f9a9b4309b15a7487f03, built on 06/29/2018 00:39 GMT (org.apache.zookeeper.server.ZooKeeperServer)
+[2018-11-02 10:25:13,045] INFO Server environment:host.name=localhost (org.apache.zookeeper.server.ZooKeeperServer)
+[2018-11-02 10:25:13,045] INFO Server environment:java.version=1.8.0_181 (org.apache.zookeeper.server.ZooKeeperServer)
+[2018-11-02 10:25:13,046] INFO Server environment:java.vendor=Oracle Corporation (org.apache.zookeeper.server.ZooKeeperServer)
+[2018-11-02 10:25:13,046] INFO Server environment:java.home=/app/oracle/product/jdk/jre (org.apache.zookeeper.server.ZooKeeperServer)
+[2018-11-02 10:25:13,046] INFO Server environment:java.class.path=/home/oracle/jdeveloper/mywork/KafkaSamples/.adf:/home/oracle/jdeveloper/mywork/KafkaSamples/KafkaClient/classes:/app/opensource/confluent/share/java/kafka/kafka.jar:/app/opensource/confluent/share/java/kafka/kafka-clients-2.0.0-cp1.jar:/app/opensource/confluent/share/java/kafka/log4j-1.2.17.jar:/app/opensource/confluent/share/java/kafka/slf4j-log4j12-1.7.25.jar:/app/opensource/confluent/share/java/kafka/slf4j-api-1.7.25.jar:/app/opensource/confluent/share/java/kafka/kafka-log4j-appender-2.0.0-cp1.jar:/app/opensource/confluent/etc/kafka:/app/opensource/confluent/share/java/kafka/zookeeper-3.4.13.jar (org.apache.zookeeper.server.ZooKeeperServer)
+[2018-11-02 10:25:13,046] INFO Server environment:java.library.path=/usr/java/packages/lib/amd64:/usr/lib64:/lib64:/lib:/usr/lib (org.apache.zookeeper.server.ZooKeeperServer)
+[2018-11-02 10:25:13,046] INFO Server environment:java.io.tmpdir=/tmp (org.apache.zookeeper.server.ZooKeeperServer)
+[2018-11-02 10:25:13,046] INFO Server environment:java.compiler=<NA> (org.apache.zookeeper.server.ZooKeeperServer)
+[2018-11-02 10:25:13,047] INFO Server environment:os.name=Linux (org.apache.zookeeper.server.ZooKeeperServer)
+[2018-11-02 10:25:13,047] INFO Server environment:os.arch=amd64 (org.apache.zookeeper.server.ZooKeeperServer)
+[2018-11-02 10:25:13,047] INFO Server environment:os.version=4.1.12-112.16.4.el7uek.x86_64 (org.apache.zookeeper.server.ZooKeeperServer)
+[2018-11-02 10:25:13,047] INFO Server environment:user.name=oracle (org.apache.zookeeper.server.ZooKeeperServer)
+[2018-11-02 10:25:13,047] INFO Server environment:user.home=/home/oracle (org.apache.zookeeper.server.ZooKeeperServer)
+[2018-11-02 10:25:13,047] INFO Server environment:user.dir=/home/oracle/jdeveloper/mywork/KafkaSamples/KafkaClient (org.apache.zookeeper.server.ZooKeeperServer)
+[2018-11-02 10:25:13,057] INFO tickTime set to 3000 (org.apache.zookeeper.server.ZooKeeperServer)
+[2018-11-02 10:25:13,057] INFO minSessionTimeout set to -1 (org.apache.zookeeper.server.ZooKeeperServer)
+[2018-11-02 10:25:13,057] INFO maxSessionTimeout set to -1 (org.apache.zookeeper.server.ZooKeeperServer)
+[2018-11-02 10:25:13,095] INFO Using org.apache.zookeeper.server.NIOServerCnxnFactory as server connection factory (org.apache.zookeeper.server.ServerCnxnFactory)
+[2018-11-02 10:25:13,101] INFO binding to port 0.0.0.0/0.0.0.0:2181 (org.apache.zookeeper.server.NIOServerCnxnFactory)
+[2018-11-02 10:25:13,418] INFO Accepted socket connection from /0:0:0:0:0:0:0:1:55586 (org.apache.zookeeper.server.NIOServerCnxnFactory)
+[2018-11-02 10:25:13,489] INFO Refusing session request for client /0:0:0:0:0:0:0:1:55586 as it has seen zxid 0x64 our last zxid is 0x0 client must try another server (org.apache.zookeeper.server.ZooKeeperServer)
+[2018-11-02 10:25:13,490] INFO Closed socket connection for client /0:0:0:0:0:0:0:1:55586 (no session established for client) (org.apache.zookeeper.server.NIOServerCnxn)
+[2018-11-02 10:25:14,413] INFO Accepted socket connection from /127.0.0.1:48482 (org.apache.zookeeper.server.NIOServerCnxnFactory)
+[2018-11-02 10:25:14,419] INFO Refusing session request for client /127.0.0.1:48482 as it has seen zxid 0x11c our last zxid is 0x0 client must try another server (org.apache.zookeeper.server.ZooKeeperServer)
+[2018-11-02 10:25:14,419] INFO Closed socket connection for client /127.0.0.1:48482 (no session established for client) (org.apache.zookeeper.server.NIOServerCnxn)
+[2018-11-02 10:25:15,175] INFO Accepted socket connection from /127.0.0.1:48483 (org.apache.zookeeper.server.NIOServerCnxnFactory)
+[2018-11-02 10:25:15,176] INFO Refusing session request for client /127.0.0.1:48483 as it has seen zxid 0x64 our last zxid is 0x0 client must try another server (org.apache.zookeeper.server.ZooKeeperServer)
+[2018-11-02 10:25:15,176] INFO Closed socket connection for client /127.0.0.1:48483 (no session established for client) (org.apache.zookeeper.server.NIOServerCnxn)
+[2018-11-02 10:25:15,846] INFO Accepted socket connection from /0:0:0:0:0:0:0:1:55589 (org.apache.zookeeper.server.NIOServerCnxnFactory)
+[2018-11-02 10:25:15,846] INFO Refusing session request for client /0:0:0:0:0:0:0:1:55589 as it has seen zxid 0x11c our last zxid is 0x0 client must try another server (org.apache.zookeeper.server.ZooKeeperServer)
+[2018-11-02 10:25:15,849] INFO Closed socket connection for client /0:0:0:0:0:0:0:1:55589 (no session established for client) (org.apache.zookeeper.server.NIOServerCnxn)
+[2018-11-02 10:25:16,475] INFO Accepted socket connection from /0:0:0:0:0:0:0:1:55590 (org.apache.zookeeper.server.NIOServerCnxnFactory)
+[2018-11-02 10:25:16,475] INFO Refusing session request for client /0:0:0:0:0:0:0:1:55590 as it has seen zxid 0x64 our last zxid is 0x0 client must try another server (org.apache.zookeeper.server.ZooKeeperServer)
+[2018-11-02 10:25:16,475] INFO Closed socket connection for client /0:0:0:0:0:0:0:1:55590 (no session established for client) (org.apache.zookeeper.server.NIOServerCnxn)
+[2018-11-02 10:25:17,194] INFO Accepted socket connection from /0:0:0:0:0:0:0:1:55591 (org.apache.zookeeper.server.NIOServerCnxnFactory)
+[2018-11-02 10:25:17,195] INFO Refusing session request for client /0:0:0:0:0:0:0:1:55591 as it has seen zxid 0x11c our last zxid is 0x0 client must try another server (org.apache.zookeeper.server.ZooKeeperServer)
+[2018-11-02 10:25:17,195] INFO Closed socket connection for client /0:0:0:0:0:0:0:1:55591 (no session established for client) (org.apache.zookeeper.server.NIOServerCnxn)
+[2018-11-02 10:25:17,820] INFO Accepted socket connection from /127.0.0.1:48487 (org.apache.zookeeper.server.NIOServerCnxnFactory)
+[2018-11-02 10:25:17,820] INFO Refusing session request for client /127.0.0.1:48487 as it has seen zxid 0x64 our last zxid is 0x0 client must try another server (org.apache.zookeeper.server.ZooKeeperServer)
+[2018-11-02 10:25:17,820] INFO Closed socket connection for client /127.0.0.1:48487 (no session established for client) (org.apache.zookeeper.server.NIOServerCnxn)
+[2018-11-02 10:25:18,678] INFO Accepted socket connection from /127.0.0.1:48488 (org.apache.zookeeper.server.NIOServerCnxnFactory)
+[2018-11-02 10:25:18,679] INFO Refusing session request for client /127.0.0.1:48488 as it has seen zxid 0x11c our last zxid is 0x0 client must try another server (org.apache.zookeeper.server.ZooKeeperServer)
+[2018-11-02 10:25:18,679] INFO Closed socket connection for client /127.0.0.1:48488 (no session established for client) (org.apache.zookeeper.server.NIOServerCnxn)
+[2018-11-02 10:25:19,160] INFO Accepted socket connection from /0:0:0:0:0:0:0:1:55594 (org.apache.zookeeper.server.NIOServerCnxnFactory)
+[2018-11-02 10:25:19,161] INFO Refusing session request for client /0:0:0:0:0:0:0:1:55594 as it has seen zxid 0x64 our last zxid is 0x0 client must try another server (org.apache.zookeeper.server.ZooKeeperServer)
+[2018-11-02 10:25:19,161] INFO Closed socket connection for client /0:0:0:0:0:0:0:1:55594 (no session established for client) (org.apache.zookeeper.server.NIOServerCnxn)
+[2018-11-02 10:25:20,472] INFO Accepted socket connection from /0:0:0:0:0:0:0:1:55595 (org.apache.zookeeper.server.NIOServerCnxnFactory)
+[2018-11-02 10:25:20,472] INFO Refusing session request for client /0:0:0:0:0:0:0:1:55595 as it has seen zxid 0x11c our last zxid is 0x0 client must try another server (org.apache.zookeeper.server.ZooKeeperServer)
+[2018-11-02 10:25:20,473] INFO Closed socket connection for client /0:0:0:0:0:0:0:1:55595 (no session established for client) (org.apache.zookeeper.server.NIOServerCnxn)
+[2018-11-02 10:25:20,758] INFO Accepted socket connection from /127.0.0.1:48491 (org.apache.zookeeper.server.NIOServerCnxnFactory)
+[2018-11-02 10:25:20,758] INFO Refusing session request for client /127.0.0.1:48491 as it has seen zxid 0x64 our last zxid is 0x0 client must try another server (org.apache.zookeeper.server.ZooKeeperServer)
+[2018-11-02 10:25:20,758] INFO Closed socket connection for client /127.0.0.1:48491 (no session established for client) (org.apache.zookeeper.server.NIOServerCnxn)
+[2018-11-02 10:25:21,647] INFO Accepted socket connection from /0:0:0:0:0:0:0:1:55597 (org.apache.zookeeper.server.NIOServerCnxnFactory)
+[2018-11-02 10:25:21,647] INFO Refusing session request for client /0:0:0:0:0:0:0:1:55597 as it has seen zxid 0x11c our last zxid is 0x0 client must try another server (org.apache.zookeeper.server.ZooKeeperServer)
+[2018-11-02 10:25:21,648] INFO Closed socket connection for client /0:0:0:0:0:0:0:1:55597 (no session established for client) (org.apache.zookeeper.server.NIOServerCnxn)
+[2018-11-02 10:25:22,783] INFO Accepted socket connection from /0:0:0:0:0:0:0:1:55598 (org.apache.zookeeper.server.NIOServerCnxnFactory)
+[2018-11-02 10:25:22,784] INFO Refusing session request for client /0:0:0:0:0:0:0:1:55598 as it has seen zxid 0x64 our last zxid is 0x0 client must try another server (org.apache.zookeeper.server.ZooKeeperServer)
+[2018-11-02 10:25:22,784] INFO Closed socket connection for client /0:0:0:0:0:0:0:1:55598 (no session established for client) (org.apache.zookeeper.server.NIOServerCnxn)
+[2018-11-02 10:25:23,625] INFO Accepted socket connection from /127.0.0.1:48494 (org.apache.zookeeper.server.NIOServerCnxnFactory)
+[2018-11-02 10:25:23,626] INFO Refusing session request for client /127.0.0.1:48494 as it has seen zxid 0x11c our last zxid is 0x0 client must try another server (org.apache.zookeeper.server.ZooKeeperServer)
+[2018-11-02 10:25:23,626] INFO Closed socket connection for client /127.0.0.1:48494 (no session established for client) (org.apache.zookeeper.server.NIOServerCnxn)
+[2018-11-02 10:25:23,948] INFO Accepted socket connection from /127.0.0.1:48495 (org.apache.zookeeper.server.NIOServerCnxnFactory)
+[2018-11-02 10:25:23,949] INFO Refusing session request for client /127.0.0.1:48495 as it has seen zxid 0x64 our last zxid is 0x0 client must try another server (org.apache.zookeeper.server.ZooKeeperServer)
+[2018-11-02 10:25:23,950] INFO Closed socket connection for client /127.0.0.1:48495 (no session established for client) (org.apache.zookeeper.server.NIOServerCnxn)
+[2018-11-02 10:25:24,820] INFO Accepted socket connection from /127.0.0.1:48496 (org.apache.zookeeper.server.NIOServerCnxnFactory)
+[2018-11-02 10:25:24,820] INFO Refusing session request for client /127.0.0.1:48496 as it has seen zxid 0x11c our last zxid is 0x0 client must try another server (org.apache.zookeeper.server.ZooKeeperServer)
+[2018-11-02 10:25:24,820] INFO Closed socket connection for client /127.0.0.1:48496 (no session established for client) (org.apache.zookeeper.server.NIOServerCnxn)
+[2018-11-02 10:25:25,543] INFO Accepted socket connection from /127.0.0.1:48497 (org.apache.zookeeper.server.NIOServerCnxnFactory)
+[2018-11-02 10:25:25,544] INFO Refusing session request for client /127.0.0.1:48497 as it has seen zxid 0x64 our last zxid is 0x0 client must try another server (org.apache.zookeeper.server.ZooKeeperServer)
+[2018-11-02 10:25:25,544] INFO Closed socket connection for client /127.0.0.1:48497 (no session established for client) (org.apache.zookeeper.server.NIOServerCnxn)
+[2018-11-02 10:25:26,019] INFO Accepted socket connection from /127.0.0.1:48498 (org.apache.zookeeper.server.NIOServerCnxnFactory)
+[2018-11-02 10:25:26,019] INFO Refusing session request for client /127.0.0.1:48498 as it has seen zxid 0x11c our last zxid is 0x0 client must try another server (org.apache.zookeeper.server.ZooKeeperServer)
+[2018-11-02 10:25:26,019] INFO Closed socket connection for client /127.0.0.1:48498 (no session established for client) (org.apache.zookeeper.server.NIOServerCnxn)
+[2018-11-02 10:25:27,320] INFO Accepted socket connection from /127.0.0.1:48499 (org.apache.zookeeper.server.NIOServerCnxnFactory)
+[2018-11-02 10:25:27,321] INFO Refusing session request for client /127.0.0.1:48499 as it has seen zxid 0x11c our last zxid is 0x0 client must try another server (org.apache.zookeeper.server.ZooKeeperServer)
+[2018-11-02 10:25:27,321] INFO Closed socket connection for client /127.0.0.1:48499 (no session established for client) (org.apache.zookeeper.server.NIOServerCnxn)
+[2018-11-02 10:25:27,396] INFO Accepted socket connection from /127.0.0.1:48500 (org.apache.zookeeper.server.NIOServerCnxnFactory)
+[2018-11-02 10:25:27,396] INFO Refusing session request for client /127.0.0.1:48500 as it has seen zxid 0x64 our last zxid is 0x0 client must try another server (org.apache.zookeeper.server.ZooKeeperServer)
+[2018-11-02 10:25:27,396] INFO Closed socket connection for client /127.0.0.1:48500 (no session established for client) (org.apache.zookeeper.server.NIOServerCnxn)
+[2018-11-02 10:25:28,876] INFO Accepted socket connection from /0:0:0:0:0:0:0:1:55606 (org.apache.zookeeper.server.NIOServerCnxnFactory)
+[2018-11-02 10:25:28,876] INFO Refusing session request for client /0:0:0:0:0:0:0:1:55606 as it has seen zxid 0x64 our last zxid is 0x0 client must try another server (org.apache.zookeeper.server.ZooKeeperServer)
+[2018-11-02 10:25:28,876] INFO Closed socket connection for client /0:0:0:0:0:0:0:1:55606 (no session established for client) (org.apache.zookeeper.server.NIOServerCnxn)
+[2018-11-02 10:25:28,901] INFO Accepted socket connection from /127.0.0.1:48502 (org.apache.zookeeper.server.NIOServerCnxnFactory)
+[2018-11-02 10:25:28,902] INFO Refusing session request for client /127.0.0.1:48502 as it has seen zxid 0x11c our last zxid is 0x0 client must try another server (org.apache.zookeeper.server.ZooKeeperServer)
+[2018-11-02 10:25:28,902] INFO Closed socket connection for client /127.0.0.1:48502 (no session established for client) (org.apache.zookeeper.server.NIOServerCnxn)
+[2018-11-02 10:25:30,015] INFO Accepted socket connection from /0:0:0:0:0:0:0:1:55608 (org.apache.zookeeper.server.NIOServerCnxnFactory)
+[2018-11-02 10:25:30,016] INFO Refusing session request for client /0:0:0:0:0:0:0:1:55608 as it has seen zxid 0x64 our last zxid is 0x0 client must try another server (org.apache.zookeeper.server.ZooKeeperServer)
+[2018-11-02 10:25:30,016] INFO Closed socket connection for client /0:0:0:0:0:0:0:1:55608 (no session established for client) (org.apache.zookeeper.server.NIOServerCnxn)
+[2018-11-02 10:25:30,469] INFO Accepted socket connection from /0:0:0:0:0:0:0:1:55609 (org.apache.zookeeper.server.NIOServerCnxnFactory)
+[2018-11-02 10:25:30,470] INFO Refusing session request for client /0:0:0:0:0:0:0:1:55609 as it has seen zxid 0x11c our last zxid is 0x0 client must try another server (org.apache.zookeeper.server.ZooKeeperServer)
+[2018-11-02 10:25:30,470] INFO Closed socket connection for client /0:0:0:0:0:0:0:1:55609 (no session established for client) (org.apache.zookeeper.server.NIOServerCnxn)
+[2018-11-02 10:25:31,755] INFO Accepted socket connection from /0:0:0:0:0:0:0:1:55610 (org.apache.zookeeper.server.NIOServerCnxnFactory)
+[2018-11-02 10:25:31,755] INFO Refusing session request for client /0:0:0:0:0:0:0:1:55610 as it has seen zxid 0x64 our last zxid is 0x0 client must try another server (org.apache.zookeeper.server.ZooKeeperServer)
+[2018-11-02 10:25:31,756] INFO Closed socket connection for client /0:0:0:0:0:0:0:1:55610 (no session established for client) (org.apache.zookeeper.server.NIOServerCnxn)
+[2018-11-02 10:25:32,457] INFO Accepted socket connection from /0:0:0:0:0:0:0:1:55611 (org.apache.zookeeper.server.NIOServerCnxnFactory)
+[2018-11-02 10:25:32,458] INFO Refusing session request for client /0:0:0:0:0:0:0:1:55611 as it has seen zxid 0x11c our last zxid is 0x0 client must try another server (org.apache.zookeeper.server.ZooKeeperServer)
+[2018-11-02 10:25:32,458] INFO Closed socket connection for client /0:0:0:0:0:0:0:1:55611 (no session established for client) (org.apache.zookeeper.server.NIOServerCnxn)
+[2018-11-02 10:25:33,520] INFO Accepted socket connection from /127.0.0.1:48507 (org.apache.zookeeper.server.NIOServerCnxnFactory)
+[2018-11-02 10:25:33,521] INFO Refusing session request for client /127.0.0.1:48507 as it has seen zxid 0x64 our last zxid is 0x0 client must try another server (org.apache.zookeeper.server.ZooKeeperServer)
+[2018-11-02 10:25:33,521] INFO Closed socket connection for client /127.0.0.1:48507 (no session established for client) (org.apache.zookeeper.server.NIOServerCnxn)
+[2018-11-02 10:25:33,971] INFO Accepted socket connection from /0:0:0:0:0:0:0:1:55613 (org.apache.zookeeper.server.NIOServerCnxnFactory)
+[2018-11-02 10:25:33,972] INFO Refusing session request for client /0:0:0:0:0:0:0:1:55613 as it has seen zxid 0x11c our last zxid is 0x0 client must try another server (org.apache.zookeeper.server.ZooKeeperServer)
+[2018-11-02 10:25:33,972] INFO Closed socket connection for client /0:0:0:0:0:0:0:1:55613 (no session established for client) (org.apache.zookeeper.server.NIOServerCnxn)
+[2018-11-02 10:25:34,780] INFO Accepted socket connection from /127.0.0.1:48509 (org.apache.zookeeper.server.NIOServerCnxnFactory)
+[2018-11-02 10:25:34,782] INFO Refusing session request for client /127.0.0.1:48509 as it has seen zxid 0x64 our last zxid is 0x0 client must try another server (org.apache.zookeeper.server.ZooKeeperServer)
+[2018-11-02 10:25:34,782] INFO Closed socket connection for client /127.0.0.1:48509 (no session established for client) (org.apache.zookeeper.server.NIOServerCnxn)
+[2018-11-02 10:25:35,602] INFO Accepted socket connection from /127.0.0.1:48510 (org.apache.zookeeper.server.NIOServerCnxnFactory)
+[2018-11-02 10:25:35,605] INFO Refusing session request for client /127.0.0.1:48510 as it has seen zxid 0x11c our last zxid is 0x0 client must try another server (org.apache.zookeeper.server.ZooKeeperServer)
+[2018-11-02 10:25:35,605] INFO Closed socket connection for client /127.0.0.1:48510 (no session established for client) (org.apache.zookeeper.server.NIOServerCnxn)
+[2018-11-02 10:25:36,755] INFO Accepted socket connection from /127.0.0.1:48511 (org.apache.zookeeper.server.NIOServerCnxnFactory)
+[2018-11-02 10:25:36,756] INFO Refusing session request for client /127.0.0.1:48511 as it has seen zxid 0x64 our last zxid is 0x0 client must try another server (org.apache.zookeeper.server.ZooKeeperServer)
+[2018-11-02 10:25:36,756] INFO Closed socket connection for client /127.0.0.1:48511 (no session established for client) (org.apache.zookeeper.server.NIOServerCnxn)
+[2018-11-02 10:25:37,572] INFO Accepted socket connection from /127.0.0.1:48512 (org.apache.zookeeper.server.NIOServerCnxnFactory)
+[2018-11-02 10:25:37,573] INFO Refusing session request for client /127.0.0.1:48512 as it has seen zxid 0x11c our last zxid is 0x0 client must try another server (org.apache.zookeeper.server.ZooKeeperServer)
+[2018-11-02 10:25:37,573] INFO Closed socket connection for client /127.0.0.1:48512 (no session established for client) (org.apache.zookeeper.server.NIOServerCnxn)
+[2018-11-02 10:25:38,396] INFO Accepted socket connection from /0:0:0:0:0:0:0:1:55618 (org.apache.zookeeper.server.NIOServerCnxnFactory)
+[2018-11-02 10:25:38,396] INFO Refusing session request for client /0:0:0:0:0:0:0:1:55618 as it has seen zxid 0x64 our last zxid is 0x0 client must try another server (org.apache.zookeeper.server.ZooKeeperServer)
+[2018-11-02 10:25:38,396] INFO Closed socket connection for client /0:0:0:0:0:0:0:1:55618 (no session established for client) (org.apache.zookeeper.server.NIOServerCnxn)
+[2018-11-02 10:25:39,175] INFO Accepted socket connection from /0:0:0:0:0:0:0:1:55619 (org.apache.zookeeper.server.NIOServerCnxnFactory)
+[2018-11-02 10:25:39,176] INFO Refusing session request for client /0:0:0:0:0:0:0:1:55619 as it has seen zxid 0x11c our last zxid is 0x0 client must try another server (org.apache.zookeeper.server.ZooKeeperServer)
+[2018-11-02 10:25:39,176] INFO Closed socket connection for client /0:0:0:0:0:0:0:1:55619 (no session established for client) (org.apache.zookeeper.server.NIOServerCnxn)
+[2018-11-02 10:25:40,312] INFO Accepted socket connection from /127.0.0.1:48515 (org.apache.zookeeper.server.NIOServerCnxnFactory)
+[2018-11-02 10:25:40,312] INFO Refusing session request for client /127.0.0.1:48515 as it has seen zxid 0x64 our last zxid is 0x0 client must try another server (org.apache.zookeeper.server.ZooKeeperServer)
+[2018-11-02 10:25:40,312] INFO Closed socket connection for client /127.0.0.1:48515 (no session established for client) (org.apache.zookeeper.server.NIOServerCnxn)
+[2018-11-02 10:25:40,767] INFO Accepted socket connection from /127.0.0.1:48516 (org.apache.zookeeper.server.NIOServerCnxnFactory)
+[2018-11-02 10:25:40,768] INFO Refusing session request for client /127.0.0.1:48516 as it has seen zxid 0x11c our last zxid is 0x0 client must try another server (org.apache.zookeeper.server.ZooKeeperServer)
+[2018-11-02 10:25:40,768] INFO Closed socket connection for client /127.0.0.1:48516 (no session established for client) (org.apache.zookeeper.server.NIOServerCnxn)
+[2018-11-02 10:25:42,289] INFO Accepted socket connection from /0:0:0:0:0:0:0:1:55622 (org.apache.zookeeper.server.NIOServerCnxnFactory)
+[2018-11-02 10:25:42,289] INFO Refusing session request for client /0:0:0:0:0:0:0:1:55622 as it has seen zxid 0x64 our last zxid is 0x0 client must try another server (org.apache.zookeeper.server.ZooKeeperServer)
+[2018-11-02 10:25:42,290] INFO Closed socket connection for client /0:0:0:0:0:0:0:1:55622 (no session established for client) (org.apache.zookeeper.server.NIOServerCnxn)
+[2018-11-02 10:25:42,600] INFO Accepted socket connection from /0:0:0:0:0:0:0:1:55623 (org.apache.zookeeper.server.NIOServerCnxnFactory)
+[2018-11-02 10:25:42,600] INFO Refusing session request for client /0:0:0:0:0:0:0:1:55623 as it has seen zxid 0x11c our last zxid is 0x0 client must try another server (org.apache.zookeeper.server.ZooKeeperServer)
+[2018-11-02 10:25:42,600] INFO Closed socket connection for client /0:0:0:0:0:0:0:1:55623 (no session established for client) (org.apache.zookeeper.server.NIOServerCnxn)
+[2018-11-02 10:25:43,703] INFO Accepted socket connection from /127.0.0.1:48519 (org.apache.zookeeper.server.NIOServerCnxnFactory)
+[2018-11-02 10:25:43,704] INFO Refusing session request for client /127.0.0.1:48519 as it has seen zxid 0x64 our last zxid is 0x0 client must try another server (org.apache.zookeeper.server.ZooKeeperServer)
+[2018-11-02 10:25:43,704] INFO Closed socket connection for client /127.0.0.1:48519 (no session established for client) (org.apache.zookeeper.server.NIOServerCnxn)
+[2018-11-02 10:25:44,013] INFO Accepted socket connection from /127.0.0.1:48520 (org.apache.zookeeper.server.NIOServerCnxnFactory)
+[2018-11-02 10:25:44,013] INFO Refusing session request for client /127.0.0.1:48520 as it has seen zxid 0x11c our last zxid is 0x0 client must try another server (org.apache.zookeeper.server.ZooKeeperServer)
+[2018-11-02 10:25:44,013] INFO Closed socket connection for client /127.0.0.1:48520 (no session established for client) (org.apache.zookeeper.server.NIOServerCnxn)
+[2018-11-02 10:25:45,267] INFO Accepted socket connection from /0:0:0:0:0:0:0:1:55626 (org.apache.zookeeper.server.NIOServerCnxnFactory)
+[2018-11-02 10:25:45,268] INFO Refusing session request for client /0:0:0:0:0:0:0:1:55626 as it has seen zxid 0x11c our last zxid is 0x0 client must try another server (org.apache.zookeeper.server.ZooKeeperServer)
+[2018-11-02 10:25:45,268] INFO Closed socket connection for client /0:0:0:0:0:0:0:1:55626 (no session established for client) (org.apache.zookeeper.server.NIOServerCnxn)
+[2018-11-02 10:25:45,529] INFO Accepted socket connection from /127.0.0.1:48522 (org.apache.zookeeper.server.NIOServerCnxnFactory)
+[2018-11-02 10:25:45,529] INFO Refusing session request for client /127.0.0.1:48522 as it has seen zxid 0x64 our last zxid is 0x0 client must try another server (org.apache.zookeeper.server.ZooKeeperServer)
+[2018-11-02 10:25:45,529] INFO Closed socket connection for client /127.0.0.1:48522 (no session established for client) (org.apache.zookeeper.server.NIOServerCnxn)
+[2018-11-02 10:25:46,868] INFO Accepted socket connection from /0:0:0:0:0:0:0:1:55628 (org.apache.zookeeper.server.NIOServerCnxnFactory)
+[2018-11-02 10:25:46,869] INFO Refusing session request for client /0:0:0:0:0:0:0:1:55628 as it has seen zxid 0x11c our last zxid is 0x0 client must try another server (org.apache.zookeeper.server.ZooKeeperServer)
+[2018-11-02 10:25:46,869] INFO Closed socket connection for client /0:0:0:0:0:0:0:1:55628 (no session established for client) (org.apache.zookeeper.server.NIOServerCnxn)
+[2018-11-02 10:25:47,188] INFO Accepted socket connection from /127.0.0.1:48524 (org.apache.zookeeper.server.NIOServerCnxnFactory)
+[2018-11-02 10:25:47,189] INFO Refusing session request for client /127.0.0.1:48524 as it has seen zxid 0x64 our last zxid is 0x0 client must try another server (org.apache.zookeeper.server.ZooKeeperServer)
+[2018-11-02 10:25:47,189] INFO Closed socket connection for client /127.0.0.1:48524 (no session established for client) (org.apache.zookeeper.server.NIOServerCnxn)
+[2018-11-02 10:25:48,939] INFO Accepted socket connection from /0:0:0:0:0:0:0:1:55630 (org.apache.zookeeper.server.NIOServerCnxnFactory)
+[2018-11-02 10:25:48,940] INFO Refusing session request for client /0:0:0:0:0:0:0:1:55630 as it has seen zxid 0x11c our last zxid is 0x0 client must try another server (org.apache.zookeeper.server.ZooKeeperServer)
+[2018-11-02 10:25:48,940] INFO Closed socket connection for client /0:0:0:0:0:0:0:1:55630 (no session established for client) (org.apache.zookeeper.server.NIOServerCnxn)
+[2018-11-02 10:25:49,139] INFO Accepted socket connection from /127.0.0.1:48526 (org.apache.zookeeper.server.NIOServerCnxnFactory)
+[2018-11-02 10:25:49,139] INFO Refusing session request for client /127.0.0.1:48526 as it has seen zxid 0x64 our last zxid is 0x0 client must try another server (org.apache.zookeeper.server.ZooKeeperServer)
+[2018-11-02 10:25:49,139] INFO Closed socket connection for client /127.0.0.1:48526 (no session established for client) (org.apache.zookeeper.server.NIOServerCnxn)
+[2018-11-02 10:25:50,746] INFO Accepted socket connection from /127.0.0.1:48527 (org.apache.zookeeper.server.NIOServerCnxnFactory)
+[2018-11-02 10:25:50,747] INFO Refusing session request for client /127.0.0.1:48527 as it has seen zxid 0x11c our last zxid is 0x0 client must try another server (org.apache.zookeeper.server.ZooKeeperServer)
+[2018-11-02 10:25:50,747] INFO Closed socket connection for client /127.0.0.1:48527 (no session established for client) (org.apache.zookeeper.server.NIOServerCnxn)
+[2018-11-02 10:25:51,103] INFO Accepted socket connection from /0:0:0:0:0:0:0:1:55633 (org.apache.zookeeper.server.NIOServerCnxnFactory)
+[2018-11-02 10:25:51,104] INFO Refusing session request for client /0:0:0:0:0:0:0:1:55633 as it has seen zxid 0x64 our last zxid is 0x0 client must try another server (org.apache.zookeeper.server.ZooKeeperServer)
+[2018-11-02 10:25:51,104] INFO Closed socket connection for client /0:0:0:0:0:0:0:1:55633 (no session established for client) (org.apache.zookeeper.server.NIOServerCnxn)
+[2018-11-02 10:25:52,718] INFO Accepted socket connection from /0:0:0:0:0:0:0:1:55634 (org.apache.zookeeper.server.NIOServerCnxnFactory)
+[2018-11-02 10:25:52,718] INFO Refusing session request for client /0:0:0:0:0:0:0:1:55634 as it has seen zxid 0x11c our last zxid is 0x0 client must try another server (org.apache.zookeeper.server.ZooKeeperServer)
+[2018-11-02 10:25:52,718] INFO Closed socket connection for client /0:0:0:0:0:0:0:1:55634 (no session established for client) (org.apache.zookeeper.server.NIOServerCnxn)
+[2018-11-02 10:25:52,768] INFO Accepted socket connection from /0:0:0:0:0:0:0:1:55635 (org.apache.zookeeper.server.NIOServerCnxnFactory)
+[2018-11-02 10:25:52,769] INFO Refusing session request for client /0:0:0:0:0:0:0:1:55635 as it has seen zxid 0x64 our last zxid is 0x0 client must try another server (org.apache.zookeeper.server.ZooKeeperServer)
+[2018-11-02 10:25:52,769] INFO Closed socket connection for client /0:0:0:0:0:0:0:1:55635 (no session established for client) (org.apache.zookeeper.server.NIOServerCnxn)
+[2018-11-02 10:25:54,230] INFO Accepted socket connection from /127.0.0.1:48531 (org.apache.zookeeper.server.NIOServerCnxnFactory)
+[2018-11-02 10:25:54,230] INFO Refusing session request for client /127.0.0.1:48531 as it has seen zxid 0x64 our last zxid is 0x0 client must try another server (org.apache.zookeeper.server.ZooKeeperServer)
+[2018-11-02 10:25:54,231] INFO Closed socket connection for client /127.0.0.1:48531 (no session established for client) (org.apache.zookeeper.server.NIOServerCnxn)
+[2018-11-02 10:25:54,252] INFO Accepted socket connection from /0:0:0:0:0:0:0:1:55637 (org.apache.zookeeper.server.NIOServerCnxnFactory)
+[2018-11-02 10:25:54,252] INFO Refusing session request for client /0:0:0:0:0:0:0:1:55637 as it has seen zxid 0x11c our last zxid is 0x0 client must try another server (org.apache.zookeeper.server.ZooKeeperServer)
+[2018-11-02 10:25:54,252] INFO Closed socket connection for client /0:0:0:0:0:0:0:1:55637 (no session established for client) (org.apache.zookeeper.server.NIOServerCnxn)
+[2018-11-02 10:25:55,530] INFO Accepted socket connection from /127.0.0.1:48533 (org.apache.zookeeper.server.NIOServerCnxnFactory)
+[2018-11-02 10:25:55,531] INFO Refusing session request for client /127.0.0.1:48533 as it has seen zxid 0x11c our last zxid is 0x0 client must try another server (org.apache.zookeeper.server.ZooKeeperServer)
+[2018-11-02 10:25:55,531] INFO Closed socket connection for client /127.0.0.1:48533 (no session established for client) (org.apache.zookeeper.server.NIOServerCnxn)
+[2018-11-02 10:25:56,118] INFO Accepted socket connection from /0:0:0:0:0:0:0:1:55639 (org.apache.zookeeper.server.NIOServerCnxnFactory)
+[2018-11-02 10:25:56,118] INFO Refusing session request for client /0:0:0:0:0:0:0:1:55639 as it has seen zxid 0x64 our last zxid is 0x0 client must try another server (org.apache.zookeeper.server.ZooKeeperServer)
+[2018-11-02 10:25:56,118] INFO Closed socket connection for client /0:0:0:0:0:0:0:1:55639 (no session established for client) (org.apache.zookeeper.server.NIOServerCnxn)
+[2018-11-02 10:25:57,199] INFO Accepted socket connection from /0:0:0:0:0:0:0:1:55640 (org.apache.zookeeper.server.NIOServerCnxnFactory)
+[2018-11-02 10:25:57,199] INFO Refusing session request for client /0:0:0:0:0:0:0:1:55640 as it has seen zxid 0x11c our last zxid is 0x0 client must try another server (org.apache.zookeeper.server.ZooKeeperServer)
+[2018-11-02 10:25:57,199] INFO Closed socket connection for client /0:0:0:0:0:0:0:1:55640 (no session established for client) (org.apache.zookeeper.server.NIOServerCnxn)
+[2018-11-02 10:25:57,257] INFO Accepted socket connection from /0:0:0:0:0:0:0:1:55641 (org.apache.zookeeper.server.NIOServerCnxnFactory)
+[2018-11-02 10:25:57,258] INFO Refusing session request for client /0:0:0:0:0:0:0:1:55641 as it has seen zxid 0x64 our last zxid is 0x0 client must try another server (org.apache.zookeeper.server.ZooKeeperServer)
+[2018-11-02 10:25:57,258] INFO Closed socket connection for client /0:0:0:0:0:0:0:1:55641 (no session established for client) (org.apache.zookeeper.server.NIOServerCnxn)
+[2018-11-02 10:25:58,950] INFO Accepted socket connection from /127.0.0.1:48537 (org.apache.zookeeper.server.NIOServerCnxnFactory)
+[2018-11-02 10:25:58,950] INFO Refusing session request for client /127.0.0.1:48537 as it has seen zxid 0x11c our last zxid is 0x0 client must try another server (org.apache.zookeeper.server.ZooKeeperServer)
+[2018-11-02 10:25:58,950] INFO Closed socket connection for client /127.0.0.1:48537 (no session established for client) (org.apache.zookeeper.server.NIOServerCnxn)
+[2018-11-02 10:25:59,146] INFO Accepted socket connection from /0:0:0:0:0:0:0:1:55643 (org.apache.zookeeper.server.NIOServerCnxnFactory)
+[2018-11-02 10:25:59,147] INFO Refusing session request for client /0:0:0:0:0:0:0:1:55643 as it has seen zxid 0x64 our last zxid is 0x0 client must try another server (org.apache.zookeeper.server.ZooKeeperServer)
+[2018-11-02 10:25:59,147] INFO Closed socket connection for client /0:0:0:0:0:0:0:1:55643 (no session established for client) (org.apache.zookeeper.server.NIOServerCnxn)
+[2018-11-02 10:26:00,447] INFO Accepted socket connection from /127.0.0.1:48539 (org.apache.zookeeper.server.NIOServerCnxnFactory)
+[2018-11-02 10:26:00,448] INFO Refusing session request for client /127.0.0.1:48539 as it has seen zxid 0x11c our last zxid is 0x0 client must try another server (org.apache.zookeeper.server.ZooKeeperServer)
+[2018-11-02 10:26:00,449] INFO Closed socket connection for client /127.0.0.1:48539 (no session established for client) (org.apache.zookeeper.server.NIOServerCnxn)
+[2018-11-02 10:26:00,818] INFO Accepted socket connection from /0:0:0:0:0:0:0:1:55645 (org.apache.zookeeper.server.NIOServerCnxnFactory)
+[2018-11-02 10:26:00,818] INFO Refusing session request for client /0:0:0:0:0:0:0:1:55645 as it has seen zxid 0x64 our last zxid is 0x0 client must try another server (org.apache.zookeeper.server.ZooKeeperServer)
+[2018-11-02 10:26:00,818] INFO Closed socket connection for client /0:0:0:0:0:0:0:1:55645 (no session established for client) (org.apache.zookeeper.server.NIOServerCnxn)
+[2018-11-02 10:26:02,081] INFO Accepted socket connection from /127.0.0.1:48541 (org.apache.zookeeper.server.NIOServerCnxnFactory)
+[2018-11-02 10:26:02,082] INFO Refusing session request for client /127.0.0.1:48541 as it has seen zxid 0x11c our last zxid is 0x0 client must try another server (org.apache.zookeeper.server.ZooKeeperServer)
+[2018-11-02 10:26:02,082] INFO Closed socket connection for client /127.0.0.1:48541 (no session established for client) (org.apache.zookeeper.server.NIOServerCnxn)
+[2018-11-02 10:26:02,730] INFO Accepted socket connection from /127.0.0.1:48542 (org.apache.zookeeper.server.NIOServerCnxnFactory)
+[2018-11-02 10:26:02,730] INFO Refusing session request for client /127.0.0.1:48542 as it has seen zxid 0x64 our last zxid is 0x0 client must try another server (org.apache.zookeeper.server.ZooKeeperServer)
+[2018-11-02 10:26:02,730] INFO Closed socket connection for client /127.0.0.1:48542 (no session established for client) (org.apache.zookeeper.server.NIOServerCnxn)
+[2018-11-02 10:26:03,677] INFO Accepted socket connection from /127.0.0.1:48543 (org.apache.zookeeper.server.NIOServerCnxnFactory)
+[2018-11-02 10:26:03,678] INFO Refusing session request for client /127.0.0.1:48543 as it has seen zxid 0x11c our last zxid is 0x0 client must try another server (org.apache.zookeeper.server.ZooKeeperServer)
+[2018-11-02 10:26:03,678] INFO Closed socket connection for client /127.0.0.1:48543 (no session established for client) (org.apache.zookeeper.server.NIOServerCnxn)
+[2018-11-02 10:26:04,591] INFO Accepted socket connection from /0:0:0:0:0:0:0:1:55649 (org.apache.zookeeper.server.NIOServerCnxnFactory)
+[2018-11-02 10:26:04,591] INFO Refusing session request for client /0:0:0:0:0:0:0:1:55649 as it has seen zxid 0x64 our last zxid is 0x0 client must try another server (org.apache.zookeeper.server.ZooKeeperServer)
+[2018-11-02 10:26:04,591] INFO Closed socket connection for client /0:0:0:0:0:0:0:1:55649 (no session established for client) (org.apache.zookeeper.server.NIOServerCnxn)
+[2018-11-02 10:26:05,399] INFO Accepted socket connection from /127.0.0.1:48545 (org.apache.zookeeper.server.NIOServerCnxnFactory)
+[2018-11-02 10:26:05,399] INFO Refusing session request for client /127.0.0.1:48545 as it has seen zxid 0x11c our last zxid is 0x0 client must try another server (org.apache.zookeeper.server.ZooKeeperServer)
+[2018-11-02 10:26:05,399] INFO Closed socket connection for client /127.0.0.1:48545 (no session established for client) (org.apache.zookeeper.server.NIOServerCnxn)
+[2018-11-02 10:26:06,498] INFO Accepted socket connection from /127.0.0.1:48546 (org.apache.zookeeper.server.NIOServerCnxnFactory)
+[2018-11-02 10:26:06,498] INFO Refusing session request for client /127.0.0.1:48546 as it has seen zxid 0x64 our last zxid is 0x0 client must try another server (org.apache.zookeeper.server.ZooKeeperServer)
+[2018-11-02 10:26:06,498] INFO Closed socket connection for client /127.0.0.1:48546 (no session established for client) (org.apache.zookeeper.server.NIOServerCnxn)
+[2018-11-02 10:26:07,285] INFO Accepted socket connection from /127.0.0.1:48547 (org.apache.zookeeper.server.NIOServerCnxnFactory)
+[2018-11-02 10:26:07,285] INFO Refusing session request for client /127.0.0.1:48547 as it has seen zxid 0x11c our last zxid is 0x0 client must try another server (org.apache.zookeeper.server.ZooKeeperServer)
+[2018-11-02 10:26:07,285] INFO Closed socket connection for client /127.0.0.1:48547 (no session established for client) (org.apache.zookeeper.server.NIOServerCnxn)
+[2018-11-02 10:26:08,597] INFO Accepted socket connection from /127.0.0.1:48548 (org.apache.zookeeper.server.NIOServerCnxnFactory)
+[2018-11-02 10:26:08,598] INFO Refusing session request for client /127.0.0.1:48548 as it has seen zxid 0x64 our last zxid is 0x0 client must try another server (org.apache.zookeeper.server.ZooKeeperServer)
+[2018-11-02 10:26:08,598] INFO Closed socket connection for client /127.0.0.1:48548 (no session established for client) (org.apache.zookeeper.server.NIOServerCnxn)
+[2018-11-02 10:26:08,777] INFO Accepted socket connection from /127.0.0.1:48549 (org.apache.zookeeper.server.NIOServerCnxnFactory)
+[2018-11-02 10:26:08,777] INFO Refusing session request for client /127.0.0.1:48549 as it has seen zxid 0x11c our last zxid is 0x0 client must try another server (org.apache.zookeeper.server.ZooKeeperServer)
+[2018-11-02 10:26:08,777] INFO Closed socket connection for client /127.0.0.1:48549 (no session established for client) (org.apache.zookeeper.server.NIOServerCnxn)
+[2018-11-02 10:26:10,322] INFO Accepted socket connection from /0:0:0:0:0:0:0:1:55655 (org.apache.zookeeper.server.NIOServerCnxnFactory)
+[2018-11-02 10:26:10,322] INFO Refusing session request for client /0:0:0:0:0:0:0:1:55655 as it has seen zxid 0x11c our last zxid is 0x0 client must try another server (org.apache.zookeeper.server.ZooKeeperServer)
+[2018-11-02 10:26:10,322] INFO Closed socket connection for client /0:0:0:0:0:0:0:1:55655 (no session established for client) (org.apache.zookeeper.server.NIOServerCnxn)
+[2018-11-02 10:26:10,486] INFO Accepted socket connection from /0:0:0:0:0:0:0:1:55656 (org.apache.zookeeper.server.NIOServerCnxnFactory)
+[2018-11-02 10:26:10,487] INFO Refusing session request for client /0:0:0:0:0:0:0:1:55656 as it has seen zxid 0x64 our last zxid is 0x0 client must try another server (org.apache.zookeeper.server.ZooKeeperServer)
+[2018-11-02 10:26:10,487] INFO Closed socket connection for client /0:0:0:0:0:0:0:1:55656 (no session established for client) (org.apache.zookeeper.server.NIOServerCnxn)
+[2018-11-02 10:26:11,484] INFO Accepted socket connection from /0:0:0:0:0:0:0:1:55657 (org.apache.zookeeper.server.NIOServerCnxnFactory)
+[2018-11-02 10:26:11,485] INFO Refusing session request for client /0:0:0:0:0:0:0:1:55657 as it has seen zxid 0x11c our last zxid is 0x0 client must try another server (org.apache.zookeeper.server.ZooKeeperServer)
+[2018-11-02 10:26:11,485] INFO Closed socket connection for client /0:0:0:0:0:0:0:1:55657 (no session established for client) (org.apache.zookeeper.server.NIOServerCnxn)
+[2018-11-02 10:26:12,083] INFO Accepted socket connection from /127.0.0.1:48553 (org.apache.zookeeper.server.NIOServerCnxnFactory)
+[2018-11-02 10:26:12,084] INFO Refusing session request for client /127.0.0.1:48553 as it has seen zxid 0x64 our last zxid is 0x0 client must try another server (org.apache.zookeeper.server.ZooKeeperServer)
+[2018-11-02 10:26:12,084] INFO Closed socket connection for client /127.0.0.1:48553 (no session established for client) (org.apache.zookeeper.server.NIOServerCnxn)
+[2018-11-02 10:26:13,411] INFO Accepted socket connection from /0:0:0:0:0:0:0:1:55659 (org.apache.zookeeper.server.NIOServerCnxnFactory)
+[2018-11-02 10:26:13,411] INFO Refusing session request for client /0:0:0:0:0:0:0:1:55659 as it has seen zxid 0x64 our last zxid is 0x0 client must try another server (org.apache.zookeeper.server.ZooKeeperServer)
+[2018-11-02 10:26:13,411] INFO Closed socket connection for client /0:0:0:0:0:0:0:1:55659 (no session established for client) (org.apache.zookeeper.server.NIOServerCnxn)
+[2018-11-02 10:26:13,593] INFO Accepted socket connection from /127.0.0.1:48555 (org.apache.zookeeper.server.NIOServerCnxnFactory)
+[2018-11-02 10:26:13,593] INFO Refusing session request for client /127.0.0.1:48555 as it has seen zxid 0x11c our last zxid is 0x0 client must try another server (org.apache.zookeeper.server.ZooKeeperServer)
+[2018-11-02 10:26:13,593] INFO Closed socket connection for client /127.0.0.1:48555 (no session established for client) (org.apache.zookeeper.server.NIOServerCnxn)
+[2018-11-02 10:26:14,918] INFO Accepted socket connection from /127.0.0.1:48556 (org.apache.zookeeper.server.NIOServerCnxnFactory)
+[2018-11-02 10:26:14,919] INFO Refusing session request for client /127.0.0.1:48556 as it has seen zxid 0x64 our last zxid is 0x0 client must try another server (org.apache.zookeeper.server.ZooKeeperServer)
+[2018-11-02 10:26:14,919] INFO Closed socket connection for client /127.0.0.1:48556 (no session established for client) (org.apache.zookeeper.server.NIOServerCnxn)
+[2018-11-02 10:26:15,254] INFO Accepted socket connection from /0:0:0:0:0:0:0:1:55662 (org.apache.zookeeper.server.NIOServerCnxnFactory)
+[2018-11-02 10:26:15,255] INFO Refusing session request for client /0:0:0:0:0:0:0:1:55662 as it has seen zxid 0x11c our last zxid is 0x0 client must try another server (org.apache.zookeeper.server.ZooKeeperServer)
+[2018-11-02 10:26:15,255] INFO Closed socket connection for client /0:0:0:0:0:0:0:1:55662 (no session established for client) (org.apache.zookeeper.server.NIOServerCnxn)
+[2018-11-02 10:26:16,170] INFO Accepted socket connection from /0:0:0:0:0:0:0:1:55663 (org.apache.zookeeper.server.NIOServerCnxnFactory)
+[2018-11-02 10:26:16,171] INFO Refusing session request for client /0:0:0:0:0:0:0:1:55663 as it has seen zxid 0x64 our last zxid is 0x0 client must try another server (org.apache.zookeeper.server.ZooKeeperServer)
+[2018-11-02 10:26:16,171] INFO Closed socket connection for client /0:0:0:0:0:0:0:1:55663 (no session established for client) (org.apache.zookeeper.server.NIOServerCnxn)
+[2018-11-02 10:26:17,149] INFO Accepted socket connection from /127.0.0.1:48559 (org.apache.zookeeper.server.NIOServerCnxnFactory)
+[2018-11-02 10:26:17,150] INFO Refusing session request for client /127.0.0.1:48559 as it has seen zxid 0x11c our last zxid is 0x0 client must try another server (org.apache.zookeeper.server.ZooKeeperServer)
+[2018-11-02 10:26:17,151] INFO Closed socket connection for client /127.0.0.1:48559 (no session established for client) (org.apache.zookeeper.server.NIOServerCnxn)
+[2018-11-02 10:26:17,781] INFO Accepted socket connection from /127.0.0.1:48560 (org.apache.zookeeper.server.NIOServerCnxnFactory)
+[2018-11-02 10:26:17,781] INFO Refusing session request for client /127.0.0.1:48560 as it has seen zxid 0x64 our last zxid is 0x0 client must try another server (org.apache.zookeeper.server.ZooKeeperServer)
+[2018-11-02 10:26:17,781] INFO Closed socket connection for client /127.0.0.1:48560 (no session established for client) (org.apache.zookeeper.server.NIOServerCnxn)
+[2018-11-02 10:26:18,902] INFO Accepted socket connection from /127.0.0.1:48561 (org.apache.zookeeper.server.NIOServerCnxnFactory)
+[2018-11-02 10:26:18,903] INFO Refusing session request for client /127.0.0.1:48561 as it has seen zxid 0x64 our last zxid is 0x0 client must try another server (org.apache.zookeeper.server.ZooKeeperServer)
+[2018-11-02 10:26:18,904] INFO Closed socket connection for client /127.0.0.1:48561 (no session established for client) (org.apache.zookeeper.server.NIOServerCnxn)
+[2018-11-02 10:26:19,219] INFO Accepted socket connection from /0:0:0:0:0:0:0:1:55667 (org.apache.zookeeper.server.NIOServerCnxnFactory)
+[2018-11-02 10:26:19,219] INFO Refusing session request for client /0:0:0:0:0:0:0:1:55667 as it has seen zxid 0x11c our last zxid is 0x0 client must try another server (org.apache.zookeeper.server.ZooKeeperServer)
+[2018-11-02 10:26:19,219] INFO Closed socket connection for client /0:0:0:0:0:0:0:1:55667 (no session established for client) (org.apache.zookeeper.server.NIOServerCnxn)
+[2018-11-02 10:26:20,755] INFO Accepted socket connection from /0:0:0:0:0:0:0:1:55668 (org.apache.zookeeper.server.NIOServerCnxnFactory)
+[2018-11-02 10:26:20,755] INFO Refusing session request for client /0:0:0:0:0:0:0:1:55668 as it has seen zxid 0x64 our last zxid is 0x0 client must try another server (org.apache.zookeeper.server.ZooKeeperServer)
+[2018-11-02 10:26:20,756] INFO Closed socket connection for client /0:0:0:0:0:0:0:1:55668 (no session established for client) (org.apache.zookeeper.server.NIOServerCnxn)
+[2018-11-02 10:26:20,831] INFO Accepted socket connection from /0:0:0:0:0:0:0:1:55669 (org.apache.zookeeper.server.NIOServerCnxnFactory)
+[2018-11-02 10:26:20,831] INFO Refusing session request for client /0:0:0:0:0:0:0:1:55669 as it has seen zxid 0x11c our last zxid is 0x0 client must try another server (org.apache.zookeeper.server.ZooKeeperServer)
+[2018-11-02 10:26:20,831] INFO Closed socket connection for client /0:0:0:0:0:0:0:1:55669 (no session established for client) (org.apache.zookeeper.server.NIOServerCnxn)
+[2018-11-02 10:26:22,064] INFO Accepted socket connection from /127.0.0.1:48565 (org.apache.zookeeper.server.NIOServerCnxnFactory)
+[2018-11-02 10:26:22,065] INFO Refusing session request for client /127.0.0.1:48565 as it has seen zxid 0x11c our last zxid is 0x0 client must try another server (org.apache.zookeeper.server.ZooKeeperServer)
+[2018-11-02 10:26:22,065] INFO Closed socket connection for client /127.0.0.1:48565 (no session established for client) (org.apache.zookeeper.server.NIOServerCnxn)
+[2018-11-02 10:26:22,786] INFO Accepted socket connection from /0:0:0:0:0:0:0:1:55671 (org.apache.zookeeper.server.NIOServerCnxnFactory)
+[2018-11-02 10:26:22,786] INFO Refusing session request for client /0:0:0:0:0:0:0:1:55671 as it has seen zxid 0x64 our last zxid is 0x0 client must try another server (org.apache.zookeeper.server.ZooKeeperServer)
+[2018-11-02 10:26:22,786] INFO Closed socket connection for client /0:0:0:0:0:0:0:1:55671 (no session established for client) (org.apache.zookeeper.server.NIOServerCnxn)
+[2018-11-02 10:26:23,179] INFO Accepted socket connection from /127.0.0.1:48567 (org.apache.zookeeper.server.NIOServerCnxnFactory)
+[2018-11-02 10:26:23,179] INFO Refusing session request for client /127.0.0.1:48567 as it has seen zxid 0x11c our last zxid is 0x0 client must try another server (org.apache.zookeeper.server.ZooKeeperServer)
+[2018-11-02 10:26:23,179] INFO Closed socket connection for client /127.0.0.1:48567 (no session established for client) (org.apache.zookeeper.server.NIOServerCnxn)
+[2018-11-02 10:26:24,350] INFO Accepted socket connection from /0:0:0:0:0:0:0:1:55673 (org.apache.zookeeper.server.NIOServerCnxnFactory)
+[2018-11-02 10:26:24,350] INFO Refusing session request for client /0:0:0:0:0:0:0:1:55673 as it has seen zxid 0x64 our last zxid is 0x0 client must try another server (org.apache.zookeeper.server.ZooKeeperServer)
+[2018-11-02 10:26:24,351] INFO Closed socket connection for client /0:0:0:0:0:0:0:1:55673 (no session established for client) (org.apache.zookeeper.server.NIOServerCnxn)
+[2018-11-02 10:26:24,823] INFO Accepted socket connection from /0:0:0:0:0:0:0:1:55674 (org.apache.zookeeper.server.NIOServerCnxnFactory)
+[2018-11-02 10:26:24,823] INFO Refusing session request for client /0:0:0:0:0:0:0:1:55674 as it has seen zxid 0x11c our last zxid is 0x0 client must try another server (org.apache.zookeeper.server.ZooKeeperServer)
+[2018-11-02 10:26:24,823] INFO Closed socket connection for client /0:0:0:0:0:0:0:1:55674 (no session established for client) (org.apache.zookeeper.server.NIOServerCnxn)
+[2018-11-02 10:26:25,467] INFO Accepted socket connection from /127.0.0.1:48570 (org.apache.zookeeper.server.NIOServerCnxnFactory)
+[2018-11-02 10:26:25,467] INFO Refusing session request for client /127.0.0.1:48570 as it has seen zxid 0x64 our last zxid is 0x0 client must try another server (org.apache.zookeeper.server.ZooKeeperServer)
+[2018-11-02 10:26:25,467] INFO Closed socket connection for client /127.0.0.1:48570 (no session established for client) (org.apache.zookeeper.server.NIOServerCnxn)
+[2018-11-02 10:26:25,959] INFO Accepted socket connection from /0:0:0:0:0:0:0:1:55676 (org.apache.zookeeper.server.NIOServerCnxnFactory)
+[2018-11-02 10:26:25,960] INFO Refusing session request for client /0:0:0:0:0:0:0:1:55676 as it has seen zxid 0x11c our last zxid is 0x0 client must try another server (org.apache.zookeeper.server.ZooKeeperServer)
+[2018-11-02 10:26:25,960] INFO Closed socket connection for client /0:0:0:0:0:0:0:1:55676 (no session established for client) (org.apache.zookeeper.server.NIOServerCnxn)
+[2018-11-02 10:26:26,797] INFO Accepted socket connection from /127.0.0.1:48572 (org.apache.zookeeper.server.NIOServerCnxnFactory)
+[2018-11-02 10:26:26,797] INFO Refusing session request for client /127.0.0.1:48572 as it has seen zxid 0x64 our last zxid is 0x0 client must try another server (org.apache.zookeeper.server.ZooKeeperServer)
+[2018-11-02 10:26:26,797] INFO Closed socket connection for client /127.0.0.1:48572 (no session established for client) (org.apache.zookeeper.server.NIOServerCnxn)
+[2018-11-02 10:26:27,279] INFO Accepted socket connection from /0:0:0:0:0:0:0:1:55678 (org.apache.zookeeper.server.NIOServerCnxnFactory)
+[2018-11-02 10:26:27,279] INFO Refusing session request for client /0:0:0:0:0:0:0:1:55678 as it has seen zxid 0x11c our last zxid is 0x0 client must try another server (org.apache.zookeeper.server.ZooKeeperServer)
+[2018-11-02 10:26:27,279] INFO Closed socket connection for client /0:0:0:0:0:0:0:1:55678 (no session established for client) (org.apache.zookeeper.server.NIOServerCnxn)
+[2018-11-02 10:26:28,604] INFO Accepted socket connection from /127.0.0.1:48574 (org.apache.zookeeper.server.NIOServerCnxnFactory)
+[2018-11-02 10:26:28,604] INFO Refusing session request for client /127.0.0.1:48574 as it has seen zxid 0x64 our last zxid is 0x0 client must try another server (org.apache.zookeeper.server.ZooKeeperServer)
+[2018-11-02 10:26:28,604] INFO Closed socket connection for client /127.0.0.1:48574 (no session established for client) (org.apache.zookeeper.server.NIOServerCnxn)
+[2018-11-02 10:26:29,001] INFO Accepted socket connection from /0:0:0:0:0:0:0:1:55680 (org.apache.zookeeper.server.NIOServerCnxnFactory)
+[2018-11-02 10:26:29,002] INFO Refusing session request for client /0:0:0:0:0:0:0:1:55680 as it has seen zxid 0x11c our last zxid is 0x0 client must try another server (org.apache.zookeeper.server.ZooKeeperServer)
+[2018-11-02 10:26:29,002] INFO Closed socket connection for client /0:0:0:0:0:0:0:1:55680 (no session established for client) (org.apache.zookeeper.server.NIOServerCnxn)
+[2018-11-02 10:26:30,055] INFO Accepted socket connection from /0:0:0:0:0:0:0:1:55681 (org.apache.zookeeper.server.NIOServerCnxnFactory)
+[2018-11-02 10:26:30,055] INFO Refusing session request for client /0:0:0:0:0:0:0:1:55681 as it has seen zxid 0x64 our last zxid is 0x0 client must try another server (org.apache.zookeeper.server.ZooKeeperServer)
+[2018-11-02 10:26:30,055] INFO Closed socket connection for client /0:0:0:0:0:0:0:1:55681 (no session established for client) (org.apache.zookeeper.server.NIOServerCnxn)
+[2018-11-02 10:26:30,162] INFO Accepted socket connection from /127.0.0.1:48577 (org.apache.zookeeper.server.NIOServerCnxnFactory)
+[2018-11-02 10:26:30,162] INFO Refusing session request for client /127.0.0.1:48577 as it has seen zxid 0x11c our last zxid is 0x0 client must try another server (org.apache.zookeeper.server.ZooKeeperServer)
+[2018-11-02 10:26:30,162] INFO Closed socket connection for client /127.0.0.1:48577 (no session established for client) (org.apache.zookeeper.server.NIOServerCnxn)
+[2018-11-02 10:26:31,428] INFO Accepted socket connection from /0:0:0:0:0:0:0:1:55683 (org.apache.zookeeper.server.NIOServerCnxnFactory)
+[2018-11-02 10:26:31,428] INFO Refusing session request for client /0:0:0:0:0:0:0:1:55683 as it has seen zxid 0x64 our last zxid is 0x0 client must try another server (org.apache.zookeeper.server.ZooKeeperServer)
+[2018-11-02 10:26:31,429] INFO Closed socket connection for client /0:0:0:0:0:0:0:1:55683 (no session established for client) (org.apache.zookeeper.server.NIOServerCnxn)
+[2018-11-02 10:26:31,804] INFO Accepted socket connection from /0:0:0:0:0:0:0:1:55684 (org.apache.zookeeper.server.NIOServerCnxnFactory)
+[2018-11-02 10:26:31,805] INFO Refusing session request for client /0:0:0:0:0:0:0:1:55684 as it has seen zxid 0x11c our last zxid is 0x0 client must try another server (org.apache.zookeeper.server.ZooKeeperServer)
+[2018-11-02 10:26:31,805] INFO Closed socket connection for client /0:0:0:0:0:0:0:1:55684 (no session established for client) (org.apache.zookeeper.server.NIOServerCnxn)
+[2018-11-02 10:26:31,907] INFO ProducerConfig values: 
+	acks = all
+	batch.size = 16384
+	bootstrap.servers = [localhost:9092]
+	buffer.memory = 33554432
+	client.id = 
+	compression.type = none
+	confluent.batch.expiry.ms = 30000
+	connections.max.idle.ms = 540000
+	enable.idempotence = false
+	interceptor.classes = []
+	key.serializer = class org.apache.kafka.common.serialization.StringSerializer
+	linger.ms = 1
+	max.block.ms = 60000
+	max.in.flight.requests.per.connection = 5
+	max.request.size = 1048576
+	metadata.max.age.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	partitioner.class = class org.apache.kafka.clients.producer.internals.DefaultPartitioner
+	receive.buffer.bytes = 32768
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retries = 0
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.mechanism = GSSAPI
+	security.protocol = PLAINTEXT
+	send.buffer.bytes = 131072
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.1, TLSv1]
+	ssl.endpoint.identification.algorithm = https
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLS
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	transaction.timeout.ms = 60000
+	transactional.id = null
+	value.serializer = class org.apache.kafka.common.serialization.StringSerializer
+ (org.apache.kafka.clients.producer.ProducerConfig)
+[2018-11-02 10:26:32,140] INFO Kafka version : 2.0.0-cp1 (org.apache.kafka.common.utils.AppInfoParser)
+[2018-11-02 10:26:32,141] INFO Kafka commitId : fc9a81e8d72f61be (org.apache.kafka.common.utils.AppInfoParser)
+[2018-11-02 10:26:32,369] INFO Cluster ID: zd2ceG-6RJ-yvgi3bNMtqA (org.apache.kafka.clients.Metadata)
+[2018-11-02 10:26:32,387] INFO [Producer clientId=producer-1] Closing the Kafka producer with timeoutMillis = 9223372036854775807 ms. (org.apache.kafka.clients.producer.KafkaProducer)
+[2018-11-02 10:26:33,080] INFO Accepted socket connection from /0:0:0:0:0:0:0:1:55687 (org.apache.zookeeper.server.NIOServerCnxnFactory)
+[2018-11-02 10:26:33,080] INFO Refusing session request for client /0:0:0:0:0:0:0:1:55687 as it has seen zxid 0x64 our last zxid is 0x0 client must try another server (org.apache.zookeeper.server.ZooKeeperServer)
+[2018-11-02 10:26:33,080] INFO Closed socket connection for client /0:0:0:0:0:0:0:1:55687 (no session established for client) (org.apache.zookeeper.server.NIOServerCnxn)
+[2018-11-02 10:26:33,697] INFO Accepted socket connection from /127.0.0.1:48583 (org.apache.zookeeper.server.NIOServerCnxnFactory)
+[2018-11-02 10:26:33,697] INFO Refusing session request for client /127.0.0.1:48583 as it has seen zxid 0x11c our last zxid is 0x0 client must try another server (org.apache.zookeeper.server.ZooKeeperServer)
+[2018-11-02 10:26:33,697] INFO Closed socket connection for client /127.0.0.1:48583 (no session established for client) (org.apache.zookeeper.server.NIOServerCnxn)
+[2018-11-02 10:26:34,219] INFO Accepted socket connection from /127.0.0.1:48584 (org.apache.zookeeper.server.NIOServerCnxnFactory)
+[2018-11-02 10:26:34,219] INFO Refusing session request for client /127.0.0.1:48584 as it has seen zxid 0x64 our last zxid is 0x0 client must try another server (org.apache.zookeeper.server.ZooKeeperServer)
+[2018-11-02 10:26:34,219] INFO Closed socket connection for client /127.0.0.1:48584 (no session established for client) (org.apache.zookeeper.server.NIOServerCnxn)
+[2018-11-02 10:26:35,354] INFO Accepted socket connection from /0:0:0:0:0:0:0:1:55690 (org.apache.zookeeper.server.NIOServerCnxnFactory)
+[2018-11-02 10:26:35,354] INFO Refusing session request for client /0:0:0:0:0:0:0:1:55690 as it has seen zxid 0x64 our last zxid is 0x0 client must try another server (org.apache.zookeeper.server.ZooKeeperServer)
+[2018-11-02 10:26:35,354] INFO Closed socket connection for client /0:0:0:0:0:0:0:1:55690 (no session established for client) (org.apache.zookeeper.server.NIOServerCnxn)
+[2018-11-02 10:26:35,558] INFO Accepted socket connection from /127.0.0.1:48586 (org.apache.zookeeper.server.NIOServerCnxnFactory)
+[2018-11-02 10:26:35,558] INFO Refusing session request for client /127.0.0.1:48586 as it has seen zxid 0x11c our last zxid is 0x0 client must try another server (org.apache.zookeeper.server.ZooKeeperServer)
+[2018-11-02 10:26:35,558] INFO Closed socket connection for client /127.0.0.1:48586 (no session established for client) (org.apache.zookeeper.server.NIOServerCnxn)
+[2018-11-02 10:26:36,530] INFO Accepted socket connection from /127.0.0.1:48587 (org.apache.zookeeper.server.NIOServerCnxnFactory)
+[2018-11-02 10:26:36,531] INFO Refusing session request for client /127.0.0.1:48587 as it has seen zxid 0x64 our last zxid is 0x0 client must try another server (org.apache.zookeeper.server.ZooKeeperServer)
+[2018-11-02 10:26:36,531] INFO Closed socket connection for client /127.0.0.1:48587 (no session established for client) (org.apache.zookeeper.server.NIOServerCnxn)
+[2018-11-02 10:26:37,316] INFO Accepted socket connection from /0:0:0:0:0:0:0:1:55693 (org.apache.zookeeper.server.NIOServerCnxnFactory)
+[2018-11-02 10:26:37,317] INFO Refusing session request for client /0:0:0:0:0:0:0:1:55693 as it has seen zxid 0x11c our last zxid is 0x0 client must try another server (org.apache.zookeeper.server.ZooKeeperServer)
+[2018-11-02 10:26:37,317] INFO Closed socket connection for client /0:0:0:0:0:0:0:1:55693 (no session established for client) (org.apache.zookeeper.server.NIOServerCnxn)
+[2018-11-02 10:26:38,386] INFO Accepted socket connection from /127.0.0.1:48589 (org.apache.zookeeper.server.NIOServerCnxnFactory)
+[2018-11-02 10:26:38,386] INFO Refusing session request for client /127.0.0.1:48589 as it has seen zxid 0x64 our last zxid is 0x0 client must try another server (org.apache.zookeeper.server.ZooKeeperServer)
+[2018-11-02 10:26:38,386] INFO Closed socket connection for client /127.0.0.1:48589 (no session established for client) (org.apache.zookeeper.server.NIOServerCnxn)
+[2018-11-02 10:26:38,661] INFO Accepted socket connection from /127.0.0.1:48590 (org.apache.zookeeper.server.NIOServerCnxnFactory)
+[2018-11-02 10:26:38,662] INFO Refusing session request for client /127.0.0.1:48590 as it has seen zxid 0x11c our last zxid is 0x0 client must try another server (org.apache.zookeeper.server.ZooKeeperServer)
+[2018-11-02 10:26:38,662] INFO Closed socket connection for client /127.0.0.1:48590 (no session established for client) (org.apache.zookeeper.server.NIOServerCnxn)
+[2018-11-02 10:26:39,881] INFO Accepted socket connection from /0:0:0:0:0:0:0:1:55696 (org.apache.zookeeper.server.NIOServerCnxnFactory)
+[2018-11-02 10:26:39,881] INFO Refusing session request for client /0:0:0:0:0:0:0:1:55696 as it has seen zxid 0x64 our last zxid is 0x0 client must try another server (org.apache.zookeeper.server.ZooKeeperServer)
+[2018-11-02 10:26:39,881] INFO Closed socket connection for client /0:0:0:0:0:0:0:1:55696 (no session established for client) (org.apache.zookeeper.server.NIOServerCnxn)
+[2018-11-02 10:26:40,178] INFO Accepted socket connection from /0:0:0:0:0:0:0:1:55697 (org.apache.zookeeper.server.NIOServerCnxnFactory)
+[2018-11-02 10:26:40,179] INFO Refusing session request for client /0:0:0:0:0:0:0:1:55697 as it has seen zxid 0x11c our last zxid is 0x0 client must try another server (org.apache.zookeeper.server.ZooKeeperServer)
+[2018-11-02 10:26:40,179] INFO Closed socket connection for client /0:0:0:0:0:0:0:1:55697 (no session established for client) (org.apache.zookeeper.server.NIOServerCnxn)
+[2018-11-02 10:26:41,253] INFO ConsumerConfig values: 
+	auto.commit.interval.ms = 1000
+	auto.offset.reset = latest
+	bootstrap.servers = [localhost:9092]
+	check.crcs = true
+	client.id = 
+	connections.max.idle.ms = 540000
+	default.api.timeout.ms = 60000
+	enable.auto.commit = true
+	exclude.internal.topics = true
+	fetch.max.bytes = 52428800
+	fetch.max.wait.ms = 500
+	fetch.min.bytes = 1
+	group.id = test
+	heartbeat.interval.ms = 3000
+	interceptor.classes = []
+	internal.leave.group.on.close = true
+	isolation.level = read_uncommitted
+	key.deserializer = class org.apache.kafka.common.serialization.StringDeserializer
+	max.partition.fetch.bytes = 1048576
+	max.poll.interval.ms = 300000
+	max.poll.records = 500
+	metadata.max.age.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	partition.assignment.strategy = [class org.apache.kafka.clients.consumer.RangeAssignor]
+	receive.buffer.bytes = 65536
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.mechanism = GSSAPI
+	security.protocol = PLAINTEXT
+	send.buffer.bytes = 131072
+	session.timeout.ms = 30000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.1, TLSv1]
+	ssl.endpoint.identification.algorithm = https
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLS
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	value.deserializer = class org.apache.kafka.common.serialization.StringDeserializer
+ (org.apache.kafka.clients.consumer.ConsumerConfig)
+[2018-11-02 10:26:41,383] INFO Accepted socket connection from /127.0.0.1:48593 (org.apache.zookeeper.server.NIOServerCnxnFactory)
+[2018-11-02 10:26:41,383] INFO Refusing session request for client /127.0.0.1:48593 as it has seen zxid 0x11c our last zxid is 0x0 client must try another server (org.apache.zookeeper.server.ZooKeeperServer)
+[2018-11-02 10:26:41,383] INFO Closed socket connection for client /127.0.0.1:48593 (no session established for client) (org.apache.zookeeper.server.NIOServerCnxn)
+[2018-11-02 10:26:41,407] INFO Kafka version : 2.0.0-cp1 (org.apache.kafka.common.utils.AppInfoParser)
+[2018-11-02 10:26:41,407] INFO Kafka commitId : fc9a81e8d72f61be (org.apache.kafka.common.utils.AppInfoParser)
+[2018-11-02 10:26:41,614] INFO Accepted socket connection from /127.0.0.1:48595 (org.apache.zookeeper.server.NIOServerCnxnFactory)
+[2018-11-02 10:26:41,614] INFO Refusing session request for client /127.0.0.1:48595 as it has seen zxid 0x64 our last zxid is 0x0 client must try another server (org.apache.zookeeper.server.ZooKeeperServer)
+[2018-11-02 10:26:41,614] INFO Closed socket connection for client /127.0.0.1:48595 (no session established for client) (org.apache.zookeeper.server.NIOServerCnxn)
+[2018-11-02 10:26:41,642] INFO Cluster ID: zd2ceG-6RJ-yvgi3bNMtqA (org.apache.kafka.clients.Metadata)
+[2018-11-02 10:26:41,643] INFO [Consumer clientId=consumer-1, groupId=test] Discovered group coordinator localhost:9092 (id: 2147483647 rack: null) (org.apache.kafka.clients.consumer.internals.AbstractCoordinator)
+[2018-11-02 10:26:41,645] INFO [Consumer clientId=consumer-1, groupId=test] Revoking previously assigned partitions [] (org.apache.kafka.clients.consumer.internals.ConsumerCoordinator)
+[2018-11-02 10:26:41,646] INFO [Consumer clientId=consumer-1, groupId=test] (Re-)joining group (org.apache.kafka.clients.consumer.internals.AbstractCoordinator)
+[2018-11-02 10:26:41,662] INFO [Consumer clientId=consumer-1, groupId=test] Successfully joined group with generation 5 (org.apache.kafka.clients.consumer.internals.AbstractCoordinator)
+[2018-11-02 10:26:41,663] INFO [Consumer clientId=consumer-1, groupId=test] Setting newly assigned partitions [M10_TOPIC-2, M10_TOPIC-3, M10_TOPIC-4, M10_TOPIC-5, M10_TOPIC-0, M10_TOPIC-1, M10_TOPIC-10, M10_TOPIC-11, M10_TOPIC-12, M10_TOPIC-6, M10_TOPIC-7, M10_TOPIC-8, M10_TOPIC-9] (org.apache.kafka.clients.consumer.internals.ConsumerCoordinator)
+[2018-11-02 10:26:42,735] INFO Accepted socket connection from /0:0:0:0:0:0:0:1:55703 (org.apache.zookeeper.server.NIOServerCnxnFactory)
+[2018-11-02 10:26:42,736] INFO Refusing session request for client /0:0:0:0:0:0:0:1:55703 as it has seen zxid 0x64 our last zxid is 0x0 client must try another server (org.apache.zookeeper.server.ZooKeeperServer)
+[2018-11-02 10:26:42,736] INFO Closed socket connection for client /0:0:0:0:0:0:0:1:55703 (no session established for client) (org.apache.zookeeper.server.NIOServerCnxn)
+[2018-11-02 10:26:43,402] INFO Accepted socket connection from /127.0.0.1:48599 (org.apache.zookeeper.server.NIOServerCnxnFactory)
+[2018-11-02 10:26:43,402] INFO Refusing session request for client /127.0.0.1:48599 as it has seen zxid 0x11c our last zxid is 0x0 client must try another server (org.apache.zookeeper.server.ZooKeeperServer)
+[2018-11-02 10:26:43,402] INFO Closed socket connection for client /127.0.0.1:48599 (no session established for client) (org.apache.zookeeper.server.NIOServerCnxn)
+[2018-11-02 10:26:44,161] INFO Accepted socket connection from /127.0.0.1:48600 (org.apache.zookeeper.server.NIOServerCnxnFactory)
+[2018-11-02 10:26:44,162] INFO Refusing session request for client /127.0.0.1:48600 as it has seen zxid 0x64 our last zxid is 0x0 client must try another server (org.apache.zookeeper.server.ZooKeeperServer)
+[2018-11-02 10:26:44,162] INFO Closed socket connection for client /127.0.0.1:48600 (no session established for client) (org.apache.zookeeper.server.NIOServerCnxn)
+[2018-11-02 10:26:45,047] INFO Accepted socket connection from /0:0:0:0:0:0:0:1:55706 (org.apache.zookeeper.server.NIOServerCnxnFactory)
+[2018-11-02 10:26:45,047] INFO Refusing session request for client /0:0:0:0:0:0:0:1:55706 as it has seen zxid 0x11c our last zxid is 0x0 client must try another server (org.apache.zookeeper.server.ZooKeeperServer)
+[2018-11-02 10:26:45,047] INFO Closed socket connection for client /0:0:0:0:0:0:0:1:55706 (no session established for client) (org.apache.zookeeper.server.NIOServerCnxn)
+[2018-11-02 10:26:45,579] INFO Accepted socket connection from /0:0:0:0:0:0:0:1:55707 (org.apache.zookeeper.server.NIOServerCnxnFactory)
+[2018-11-02 10:26:45,580] INFO Refusing session request for client /0:0:0:0:0:0:0:1:55707 as it has seen zxid 0x64 our last zxid is 0x0 client must try another server (org.apache.zookeeper.server.ZooKeeperServer)
+[2018-11-02 10:26:45,580] INFO Closed socket connection for client /0:0:0:0:0:0:0:1:55707 (no session established for client) (org.apache.zookeeper.server.NIOServerCnxn)
+[2018-11-02 10:26:46,586] INFO Accepted socket connection from /127.0.0.1:48603 (org.apache.zookeeper.server.NIOServerCnxnFactory)
+[2018-11-02 10:26:46,598] INFO Refusing session request for client /127.0.0.1:48603 as it has seen zxid 0x11c our last zxid is 0x0 client must try another server (org.apache.zookeeper.server.ZooKeeperServer)
+[2018-11-02 10:26:46,598] INFO Closed socket connection for client /127.0.0.1:48603 (no session established for client) (org.apache.zookeeper.server.NIOServerCnxn)
+[2018-11-02 10:26:47,116] INFO Accepted socket connection from /127.0.0.1:48604 (org.apache.zookeeper.server.NIOServerCnxnFactory)
+[2018-11-02 10:26:47,117] INFO Refusing session request for client /127.0.0.1:48604 as it has seen zxid 0x64 our last zxid is 0x0 client must try another server (org.apache.zookeeper.server.ZooKeeperServer)
+[2018-11-02 10:26:47,117] INFO Closed socket connection for client /127.0.0.1:48604 (no session established for client) (org.apache.zookeeper.server.NIOServerCnxn)
+[2018-11-02 10:26:48,232] INFO Accepted socket connection from /127.0.0.1:48605 (org.apache.zookeeper.server.NIOServerCnxnFactory)
+[2018-11-02 10:26:48,232] INFO Refusing session request for client /127.0.0.1:48605 as it has seen zxid 0x11c our last zxid is 0x0 client must try another server (org.apache.zookeeper.server.ZooKeeperServer)
+[2018-11-02 10:26:48,233] INFO Closed socket connection for client /127.0.0.1:48605 (no session established for client) (org.apache.zookeeper.server.NIOServerCnxn)
+[2018-11-02 10:26:48,428] INFO Accepted socket connection from /0:0:0:0:0:0:0:1:55711 (org.apache.zookeeper.server.NIOServerCnxnFactory)
+[2018-11-02 10:26:48,428] INFO Refusing session request for client /0:0:0:0:0:0:0:1:55711 as it has seen zxid 0x64 our last zxid is 0x0 client must try another server (org.apache.zookeeper.server.ZooKeeperServer)
+[2018-11-02 10:26:48,428] INFO Closed socket connection for client /0:0:0:0:0:0:0:1:55711 (no session established for client) (org.apache.zookeeper.server.NIOServerCnxn)
+[2018-11-02 10:26:49,608] INFO Accepted socket connection from /127.0.0.1:48607 (org.apache.zookeeper.server.NIOServerCnxnFactory)
+[2018-11-02 10:26:49,608] INFO Refusing session request for client /127.0.0.1:48607 as it has seen zxid 0x64 our last zxid is 0x0 client must try another server (org.apache.zookeeper.server.ZooKeeperServer)
+[2018-11-02 10:26:49,608] INFO Closed socket connection for client /127.0.0.1:48607 (no session established for client) (org.apache.zookeeper.server.NIOServerCnxn)
+[2018-11-02 10:26:49,627] INFO Accepted socket connection from /0:0:0:0:0:0:0:1:55713 (org.apache.zookeeper.server.NIOServerCnxnFactory)
+[2018-11-02 10:26:49,628] INFO Refusing session request for client /0:0:0:0:0:0:0:1:55713 as it has seen zxid 0x11c our last zxid is 0x0 client must try another server (org.apache.zookeeper.server.ZooKeeperServer)
+[2018-11-02 10:26:49,628] INFO Closed socket connection for client /0:0:0:0:0:0:0:1:55713 (no session established for client) (org.apache.zookeeper.server.NIOServerCnxn)
+[2018-11-02 10:26:51,049] INFO Accepted socket connection from /127.0.0.1:48609 (org.apache.zookeeper.server.NIOServerCnxnFactory)
+[2018-11-02 10:26:51,049] INFO Refusing session request for client /127.0.0.1:48609 as it has seen zxid 0x64 our last zxid is 0x0 client must try another server (org.apache.zookeeper.server.ZooKeeperServer)
+[2018-11-02 10:26:51,049] INFO Closed socket connection for client /127.0.0.1:48609 (no session established for client) (org.apache.zookeeper.server.NIOServerCnxn)
+[2018-11-02 10:26:51,599] INFO Accepted socket connection from /0:0:0:0:0:0:0:1:55715 (org.apache.zookeeper.server.NIOServerCnxnFactory)
+[2018-11-02 10:26:51,600] INFO Refusing session request for client /0:0:0:0:0:0:0:1:55715 as it has seen zxid 0x11c our last zxid is 0x0 client must try another server (org.apache.zookeeper.server.ZooKeeperServer)
+[2018-11-02 10:26:51,600] INFO Closed socket connection for client /0:0:0:0:0:0:0:1:55715 (no session established for client) (org.apache.zookeeper.server.NIOServerCnxn)
+[2018-11-02 10:26:52,275] INFO Accepted socket connection from /127.0.0.1:48611 (org.apache.zookeeper.server.NIOServerCnxnFactory)
+[2018-11-02 10:26:52,275] INFO Refusing session request for client /127.0.0.1:48611 as it has seen zxid 0x64 our last zxid is 0x0 client must try another server (org.apache.zookeeper.server.ZooKeeperServer)
+[2018-11-02 10:26:52,275] INFO Closed socket connection for client /127.0.0.1:48611 (no session established for client) (org.apache.zookeeper.server.NIOServerCnxn)
+[2018-11-02 10:26:53,389] INFO Accepted socket connection from /127.0.0.1:48612 (org.apache.zookeeper.server.NIOServerCnxnFactory)
+[2018-11-02 10:26:53,389] INFO Refusing session request for client /127.0.0.1:48612 as it has seen zxid 0x11c our last zxid is 0x0 client must try another server (org.apache.zookeeper.server.ZooKeeperServer)
+[2018-11-02 10:26:53,389] INFO Closed socket connection for client /127.0.0.1:48612 (no session established for client) (org.apache.zookeeper.server.NIOServerCnxn)
+[2018-11-02 10:26:53,645] INFO Accepted socket connection from /127.0.0.1:48613 (org.apache.zookeeper.server.NIOServerCnxnFactory)
+[2018-11-02 10:26:53,647] INFO Refusing session request for client /127.0.0.1:48613 as it has seen zxid 0x64 our last zxid is 0x0 client must try another server (org.apache.zookeeper.server.ZooKeeperServer)
+[2018-11-02 10:26:53,647] INFO Closed socket connection for client /127.0.0.1:48613 (no session established for client) (org.apache.zookeeper.server.NIOServerCnxn)
+[2018-11-02 10:26:54,638] INFO Accepted socket connection from /0:0:0:0:0:0:0:1:55719 (org.apache.zookeeper.server.NIOServerCnxnFactory)
+[2018-11-02 10:26:54,638] INFO Refusing session request for client /0:0:0:0:0:0:0:1:55719 as it has seen zxid 0x11c our last zxid is 0x0 client must try another server (org.apache.zookeeper.server.ZooKeeperServer)
+[2018-11-02 10:26:54,638] INFO Closed socket connection for client /0:0:0:0:0:0:0:1:55719 (no session established for client) (org.apache.zookeeper.server.NIOServerCnxn)
+[2018-11-02 10:26:54,861] INFO Accepted socket connection from /0:0:0:0:0:0:0:1:55720 (org.apache.zookeeper.server.NIOServerCnxnFactory)
+[2018-11-02 10:26:54,861] INFO Refusing session request for client /0:0:0:0:0:0:0:1:55720 as it has seen zxid 0x64 our last zxid is 0x0 client must try another server (org.apache.zookeeper.server.ZooKeeperServer)
+[2018-11-02 10:26:54,862] INFO Closed socket connection for client /0:0:0:0:0:0:0:1:55720 (no session established for client) (org.apache.zookeeper.server.NIOServerCnxn)
+[2018-11-02 10:26:55,880] INFO Accepted socket connection from /0:0:0:0:0:0:0:1:55721 (org.apache.zookeeper.server.NIOServerCnxnFactory)
+[2018-11-02 10:26:55,880] INFO Refusing session request for client /0:0:0:0:0:0:0:1:55721 as it has seen zxid 0x11c our last zxid is 0x0 client must try another server (org.apache.zookeeper.server.ZooKeeperServer)
+[2018-11-02 10:26:55,880] INFO Closed socket connection for client /0:0:0:0:0:0:0:1:55721 (no session established for client) (org.apache.zookeeper.server.NIOServerCnxn)
+[2018-11-02 10:26:56,595] INFO Accepted socket connection from /0:0:0:0:0:0:0:1:55722 (org.apache.zookeeper.server.NIOServerCnxnFactory)
+[2018-11-02 10:26:56,596] INFO Refusing session request for client /0:0:0:0:0:0:0:1:55722 as it has seen zxid 0x64 our last zxid is 0x0 client must try another server (org.apache.zookeeper.server.ZooKeeperServer)
+[2018-11-02 10:26:56,596] INFO Closed socket connection for client /0:0:0:0:0:0:0:1:55722 (no session established for client) (org.apache.zookeeper.server.NIOServerCnxn)
+[2018-11-02 10:26:57,486] INFO Accepted socket connection from /127.0.0.1:48618 (org.apache.zookeeper.server.NIOServerCnxnFactory)
+[2018-11-02 10:26:57,486] INFO Refusing session request for client /127.0.0.1:48618 as it has seen zxid 0x11c our last zxid is 0x0 client must try another server (org.apache.zookeeper.server.ZooKeeperServer)
+[2018-11-02 10:26:57,486] INFO Closed socket connection for client /127.0.0.1:48618 (no session established for client) (org.apache.zookeeper.server.NIOServerCnxn)
+[2018-11-02 10:26:58,596] INFO Accepted socket connection from /127.0.0.1:48619 (org.apache.zookeeper.server.NIOServerCnxnFactory)
+[2018-11-02 10:26:58,597] INFO Refusing session request for client /127.0.0.1:48619 as it has seen zxid 0x64 our last zxid is 0x0 client must try another server (org.apache.zookeeper.server.ZooKeeperServer)
+[2018-11-02 10:26:58,597] INFO Closed socket connection for client /127.0.0.1:48619 (no session established for client) (org.apache.zookeeper.server.NIOServerCnxn)
+[2018-11-02 10:26:59,582] INFO Accepted socket connection from /127.0.0.1:48620 (org.apache.zookeeper.server.NIOServerCnxnFactory)
+[2018-11-02 10:26:59,583] INFO Refusing session request for client /127.0.0.1:48620 as it has seen zxid 0x11c our last zxid is 0x0 client must try another server (org.apache.zookeeper.server.ZooKeeperServer)
+[2018-11-02 10:26:59,583] INFO Closed socket connection for client /127.0.0.1:48620 (no session established for client) (org.apache.zookeeper.server.NIOServerCnxn)
+[2018-11-02 10:27:00,536] INFO Accepted socket connection from /127.0.0.1:48621 (org.apache.zookeeper.server.NIOServerCnxnFactory)
+[2018-11-02 10:27:00,537] INFO Refusing session request for client /127.0.0.1:48621 as it has seen zxid 0x64 our last zxid is 0x0 client must try another server (org.apache.zookeeper.server.ZooKeeperServer)
+[2018-11-02 10:27:00,537] INFO Closed socket connection for client /127.0.0.1:48621 (no session established for client) (org.apache.zookeeper.server.NIOServerCnxn)
+[2018-11-02 10:27:01,594] INFO Accepted socket connection from /0:0:0:0:0:0:0:1:55727 (org.apache.zookeeper.server.NIOServerCnxnFactory)
+[2018-11-02 10:27:01,594] INFO Refusing session request for client /0:0:0:0:0:0:0:1:55727 as it has seen zxid 0x11c our last zxid is 0x0 client must try another server (org.apache.zookeeper.server.ZooKeeperServer)
+[2018-11-02 10:27:01,594] INFO Closed socket connection for client /0:0:0:0:0:0:0:1:55727 (no session established for client) (org.apache.zookeeper.server.NIOServerCnxn)
+[2018-11-02 10:27:02,126] INFO Accepted socket connection from /127.0.0.1:48623 (org.apache.zookeeper.server.NIOServerCnxnFactory)
+[2018-11-02 10:27:02,127] INFO Refusing session request for client /127.0.0.1:48623 as it has seen zxid 0x64 our last zxid is 0x0 client must try another server (org.apache.zookeeper.server.ZooKeeperServer)
+[2018-11-02 10:27:02,127] INFO Closed socket connection for client /127.0.0.1:48623 (no session established for client) (org.apache.zookeeper.server.NIOServerCnxn)
+[2018-11-02 10:27:03,660] INFO Accepted socket connection from /127.0.0.1:48624 (org.apache.zookeeper.server.NIOServerCnxnFactory)
+[2018-11-02 10:27:03,661] INFO Refusing session request for client /127.0.0.1:48624 as it has seen zxid 0x11c our last zxid is 0x0 client must try another server (org.apache.zookeeper.server.ZooKeeperServer)
+[2018-11-02 10:27:03,661] INFO Closed socket connection for client /127.0.0.1:48624 (no session established for client) (org.apache.zookeeper.server.NIOServerCnxn)
+[2018-11-02 10:27:04,111] INFO Accepted socket connection from /127.0.0.1:48625 (org.apache.zookeeper.server.NIOServerCnxnFactory)
+[2018-11-02 10:27:04,112] INFO Refusing session request for client /127.0.0.1:48625 as it has seen zxid 0x64 our last zxid is 0x0 client must try another server (org.apache.zookeeper.server.ZooKeeperServer)
+[2018-11-02 10:27:04,112] INFO Closed socket connection for client /127.0.0.1:48625 (no session established for client) (org.apache.zookeeper.server.NIOServerCnxn)
