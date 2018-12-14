@@ -1,10 +1,10 @@
-package nl.darwinit.demo.kafka.server;
+package nl.darwinit.kafka.server;
 
 import java.io.IOException;
 
-import java.util.Properties;
+import java.util.Properties; 
 
-import nl.darwinit.demo.kafka.properties.PropertiesFactory;
+import nl.darwinit.kafka.properties.PropertiesFactory;
 
 import org.apache.log4j.LogManager;
 import org.apache.log4j.Logger;
@@ -17,9 +17,9 @@ import org.apache.zookeeper.server.quorum.QuorumPeerConfig;
  * https://stackoverflow.com/questions/9286054/is-it-possible-to-start-a-zookeeper-server-instance-in-process-say-for-unit-tes
  * https://www.programcreek.com/java-api-examples/index.php?api=kafka.server.KafkaServer
  */
-public class ZooKeeper {
+public class ZooKeeperStarter {
     protected  Logger logger = LogManager.getLogger(this.getClass());
-    public ZooKeeper() {
+    public ZooKeeperStarter() {
         super();
     }
 
@@ -50,7 +50,7 @@ public class ZooKeeper {
     }
 
     public static void main(String[] args) {
-        ZooKeeper zooKeeper = new ZooKeeper();
-        zooKeeper.start();
+        ZooKeeperStarter zooKeeperStarter = new ZooKeeperStarter();
+        zooKeeperStarter.start();
     }
 }

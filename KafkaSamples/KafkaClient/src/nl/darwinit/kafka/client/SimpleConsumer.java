@@ -1,4 +1,4 @@
-package nl.darwinit.demo.kafka.client;
+package nl.darwinit.kafka.client;
 
 import java.util.Properties;
 import java.util.Arrays;

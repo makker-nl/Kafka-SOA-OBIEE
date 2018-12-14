@@ -69,6 +69,29 @@
       <string v="oracle.toplink.workbench.addin/toplinkContentSet"/>
    </list>
    <value n="defaultPackage" v="nl.darwinit.demo.kafka.prod"/>
+   <hash n="oracle.ide.model.ResourcePaths">
+      <hash n="resourcesContentSet">
+         <list n="constituent-sets">
+            <hash>
+               <list n="pattern-filters">
+                  <string v="+*"/>
+               </list>
+               <list n="url-path">
+                  <url path="."/>
+               </list>
+            </hash>
+            <hash>
+               <list n="pattern-filters">
+                  <string v="+**"/>
+               </list>
+               <list n="url-path">
+                  <url protocol="file" path="/app/opensource/confluent/etc/kafka/"/>
+               </list>
+            </hash>
+         </list>
+         <list n="url-path"/>
+      </hash>
+   </hash>
    <hash n="oracle.ide.model.TechnologyScopeConfiguration">
       <list n="technologyScope">
          <string v="Java"/>
@@ -96,7 +119,26 @@
             <value n="programArguments" v="M10_TOPIC"/>
             <value n="targetURL"/>
          </hash>
+         <hash n="startKafkaBroker">
+            <value n="custom" v="false"/>
+            <value n="javaOptions" v="-Dkafka.logs.dir=/home/oracle/jdeveloper/mywork/KafkaSamples/logs"/>
+            <value n="name" v="startKafkaBroker"/>
+            <value n="programArguments" v="M10_TOPIC"/>
+            <url n="targetURL" path="src/nl/darwinit/kafka/server/KafkaServerStarter.java"/>
+         </hash>
+         <hash n="startZookeeper">
+            <value n="custom" v="false"/>
+            <value n="javaOptions" v="-Dkafka.logs.dir=/home/oracle/jdeveloper/mywork/KafkaSamples/logs"/>
+            <value n="name" v="startZookeeper"/>
+            <value n="programArguments" v="M10_TOPIC"/>
+            <url n="targetURL" path="src/nl/darwinit/kafka/server/ZooKeeperStarter.java"/>
+         </hash>
       </hash>
+      <list n="runConfigurationList">
+         <string v="Default"/>
+         <string v="startKafkaBroker"/>
+         <string v="startZookeeper"/>
+      </list>
    </hash>
    <hash n="oracle.jdevimpl.config.JProjectLibraries">
       <list n="exportedReferences">
@@ -130,6 +172,34 @@
          </hash>
          <hash>
             <value n="id" v="Zookeeper-3.4.13.jar"/>
+            <value n="isJDK" v="false"/>
+         </hash>
+         <hash>
+            <value n="id" v="Scala-library-2.11.12.jar"/>
+            <value n="isJDK" v="false"/>
+         </hash>
+         <hash>
+            <value n="id" v="Common-metrics-5.0.0.jar"/>
+            <value n="isJDK" v="false"/>
+         </hash>
+         <hash>
+            <value n="id" v="Scala-logging_2.11-3.9.0.jar"/>
+            <value n="isJDK" v="false"/>
+         </hash>
+         <hash>
+            <value n="id" v="Metrics-core-2.2.0.jar"/>
+            <value n="isJDK" v="false"/>
+         </hash>
+         <hash>
+            <value n="id" v="Jackson-core-2.9.6.jar"/>
+            <value n="isJDK" v="false"/>
+         </hash>
+         <hash>
+            <value n="id" v="Jackson-databind-2.9.6.jar"/>
+            <value n="isJDK" v="false"/>
+         </hash>
+         <hash>
+            <value n="id" v="Jackson-annotations-2.9.6.jar"/>
             <value n="isJDK" v="false"/>
          </hash>
       </list>
@@ -207,6 +277,69 @@
                <value n="id" v="Zookeeper-3.4.13.jar"/>
                <value n="locked" v="true"/>
             </hash>
+            <hash>
+               <list n="classPath">
+                  <url protocol="jar" path="file:/app/opensource/confluent/share/java/kafka/scala-library-2.11.12.jar!/"/>
+               </list>
+               <value n="deployedByDefault" v="true"/>
+               <value n="description" v="Scala-library-2.11.12.jar"/>
+               <value n="id" v="Scala-library-2.11.12.jar"/>
+               <value n="locked" v="true"/>
+            </hash>
+            <hash>
+               <list n="classPath">
+                  <url protocol="jar" path="file:/app/opensource/confluent/share/java/confluent-common/common-metrics-5.0.0.jar!/"/>
+               </list>
+               <value n="deployedByDefault" v="true"/>
+               <value n="description" v="Common-metrics-5.0.0.jar"/>
+               <value n="id" v="Common-metrics-5.0.0.jar"/>
+               <value n="locked" v="true"/>
+            </hash>
+            <hash>
+               <list n="classPath">
+                  <url protocol="jar" path="file:/app/opensource/confluent/share/java/kafka/scala-logging_2.11-3.9.0.jar!/"/>
+               </list>
+               <value n="deployedByDefault" v="true"/>
+               <value n="description" v="Scala-logging_2.11-3.9.0.jar"/>
+               <value n="id" v="Scala-logging_2.11-3.9.0.jar"/>
+               <value n="locked" v="true"/>
+            </hash>
+            <hash>
+               <list n="classPath">
+                  <url protocol="jar" path="file:/app/opensource/confluent/share/java/kafka/metrics-core-2.2.0.jar!/"/>
+               </list>
+               <value n="deployedByDefault" v="true"/>
+               <value n="description" v="Metrics-core-2.2.0.jar"/>
+               <value n="id" v="Metrics-core-2.2.0.jar"/>
+               <value n="locked" v="true"/>
+            </hash>
+            <hash>
+               <list n="classPath">
+                  <url protocol="jar" path="file:/app/opensource/confluent/share/java/kafka/jackson-core-2.9.6.jar!/"/>
+               </list>
+               <value n="deployedByDefault" v="true"/>
+               <value n="description" v="Jackson-core-2.9.6.jar"/>
+               <value n="id" v="Jackson-core-2.9.6.jar"/>
+               <value n="locked" v="true"/>
+            </hash>
+            <hash>
+               <list n="classPath">
+                  <url protocol="jar" path="file:/app/opensource/confluent/share/java/kafka/jackson-databind-2.9.6.jar!/"/>
+               </list>
+               <value n="deployedByDefault" v="true"/>
+               <value n="description" v="Jackson-databind-2.9.6.jar"/>
+               <value n="id" v="Jackson-databind-2.9.6.jar"/>
+               <value n="locked" v="true"/>
+            </hash>
+            <hash>
+               <list n="classPath">
+                  <url protocol="jar" path="file:/app/opensource/confluent/share/java/kafka/jackson-annotations-2.9.6.jar!/"/>
+               </list>
+               <value n="deployedByDefault" v="true"/>
+               <value n="description" v="Jackson-annotations-2.9.6.jar"/>
+               <value n="id" v="Jackson-annotations-2.9.6.jar"/>
+               <value n="locked" v="true"/>
+            </hash>
          </list>
       </hash>
       <list n="libraryReferences">
@@ -240,6 +373,34 @@
          </hash>
          <hash>
             <value n="id" v="Zookeeper-3.4.13.jar"/>
+            <value n="isJDK" v="false"/>
+         </hash>
+         <hash>
+            <value n="id" v="Scala-library-2.11.12.jar"/>
+            <value n="isJDK" v="false"/>
+         </hash>
+         <hash>
+            <value n="id" v="Common-metrics-5.0.0.jar"/>
+            <value n="isJDK" v="false"/>
+         </hash>
+         <hash>
+            <value n="id" v="Scala-logging_2.11-3.9.0.jar"/>
+            <value n="isJDK" v="false"/>
+         </hash>
+         <hash>
+            <value n="id" v="Metrics-core-2.2.0.jar"/>
+            <value n="isJDK" v="false"/>
+         </hash>
+         <hash>
+            <value n="id" v="Jackson-core-2.9.6.jar"/>
+            <value n="isJDK" v="false"/>
+         </hash>
+         <hash>
+            <value n="id" v="Jackson-databind-2.9.6.jar"/>
+            <value n="isJDK" v="false"/>
+         </hash>
+         <hash>
+            <value n="id" v="Jackson-annotations-2.9.6.jar"/>
             <value n="isJDK" v="false"/>
          </hash>
       </list>

@@ -1,4 +1,4 @@
-package nl.darwinit.demo.kafka.client;
+package nl.darwinit.kafka.client;
 
 // https://dzone.com/articles/kafka-producer-and-consumer-example
 //import util.properties packages
