@@ -24,6 +24,7 @@ import scala.collection.mutable.ArraySeq;
  * https://stackoverflow.com/questions/9286054/is-it-possible-to-start-a-zookeeper-server-instance-in-process-say-for-unit-tes
  * https://www.programcreek.com/java-api-examples/index.php?api=kafka.server.KafkaServer
  * https://grokonez.com/java-integration/distributed-system/start-apache-kafka#2_Start_a_Kafka_server
+ * https://www.programcreek.com/java-api-examples/index.php?api=kafka.metrics.KafkaMetricsReporter
  */
 public class KafkaServerStarter {
     protected Logger logger = LogManager.getLogger(this.getClass());
