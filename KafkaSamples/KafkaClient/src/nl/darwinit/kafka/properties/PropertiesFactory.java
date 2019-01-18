@@ -5,12 +5,15 @@ import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.io.InputStream;
 
-import java.util.Properties;
+import nl.darwinit.kafka.logging.Log;
+import nl.darwinit.kafka.server.ZooKeeperStarter;
+
 
 public abstract class PropertiesFactory {
-    public static final String ZK_PROPS="zookeeper.properties";
-    public static final String DFT_KS_PROPS="server.properties";
-    
+    private static Log log = new Log(PropertiesFactory.class); 
+    public static final String ZK_PROPS = "zookeeper.properties";
+    public static final String DFT_KS_PROPS = "server.properties";
+
     /**
      * GetProperties to load a property file from classpath
      * From https://crunchify.com/java-properties-file-how-to-read-config-properties-values-in-java/
@@ -19,6 +22,8 @@ public abstract class PropertiesFactory {
      * @throws IOException
      */
     public static Properties getProperties(String propertyFileName) throws IOException {
+        final String methodName = "Properties";
+        log.start(methodName);
         Properties properties = new Properties();
 
         InputStream inputStream = PropertiesFactory.class.getClassLoader().getResourceAsStream(propertyFileName);
@@ -28,23 +33,35 @@ public abstract class PropertiesFactory {
         } else {
             throw new FileNotFoundException("property file '" + propertyFileName + "' not found in the classpath");
         }
+        log.end(methodName);
         return properties;
     }
+
     /**
      * Get Zookeeper properties
      * @return
      * @throws IOException
      */
-    public static Properties getZKProperties() throws IOException {
-        return getProperties(ZK_PROPS);
+    public static ZooKeeperProperties getZKProperties() throws IOException {
+        final String methodName = "ZooKeeperProperties";
+        log.start(methodName);
+        Properties properties = getProperties(ZK_PROPS);
+        ZooKeeperProperties zkProperties = new ZooKeeperProperties(properties);
+        log.end(methodName);
+        return zkProperties;
     }
+
     /**
      * Get Default Kafka Server properties
      * @return
      * @throws IOException
      */
     public static Properties getKSProperties() throws IOException {
-        return getProperties(DFT_KS_PROPS);
+        final String methodName = "ZooKeeperProperties";
+        log.start(methodName);        
+        Properties properties = getProperties(DFT_KS_PROPS);
+        log.end(methodName);
+        return properties;
     }
-    
+
 }

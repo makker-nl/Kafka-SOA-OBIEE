@@ -27,7 +27,8 @@ import scala.collection.mutable.ArraySeq;
  * https://www.programcreek.com/java-api-examples/index.php?api=kafka.metrics.KafkaMetricsReporter
  */
 public class KafkaServerStarter {
-    protected Logger logger = LogManager.getLogger(this.getClass());
+    private static String className = KafkaServerStarter.class.getName();
+    private static Logger logger = LogManager.getLogger(className);
 
     public KafkaServerStarter() {
         super();
@@ -35,6 +36,8 @@ public class KafkaServerStarter {
 
 
     public void start() {
+        final String methodName = "start";
+        logStart(methodName);
         Properties serverProperties;
         try {
             serverProperties = PropertiesFactory.getKSProperties();
@@ -51,10 +54,26 @@ public class KafkaServerStarter {
                 server.startup();
             }
         }.start();
+        logEnd(methodName);
+    }
+
+    public static void log(String methodName, String text) {
+        logger.debug(className + "." + methodName + ": " + text);
+    }
+
+    public static void logStart(String methodName) {
+        log(methodName, "Start");
+    }
+
+    public static void logEnd(String methodName) {
+        log(methodName, "End");
     }
 
     public static void main(String[] args) {
+        final String methodName = "main";
+        logStart(methodName);
         KafkaServerStarter kafkaServerStarter = new KafkaServerStarter();
         kafkaServerStarter.start();
+        logEnd(methodName);
     }
 }

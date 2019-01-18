@@ -119,6 +119,13 @@
             <value n="programArguments" v="M10_TOPIC"/>
             <value n="targetURL"/>
          </hash>
+         <hash n="startKafka">
+            <value n="custom" v="false"/>
+            <value n="javaOptions" v="-Dkafka.logs.dir=/home/oracle/jdeveloper/mywork/KafkaSamples/logs"/>
+            <value n="name" v="startKafka"/>
+            <value n="programArguments" v=""/>
+            <url n="targetURL" path="src/nl/darwinit/kafka/weblogic/KafkaStartupClass.java"/>
+         </hash>
          <hash n="startKafkaBroker">
             <value n="custom" v="false"/>
             <value n="javaOptions" v="-Dkafka.logs.dir=/home/oracle/jdeveloper/mywork/KafkaSamples/logs"/>
@@ -136,6 +143,7 @@
       </hash>
       <list n="runConfigurationList">
          <string v="Default"/>
+         <string v="startKafka"/>
          <string v="startKafkaBroker"/>
          <string v="startZookeeper"/>
       </list>
