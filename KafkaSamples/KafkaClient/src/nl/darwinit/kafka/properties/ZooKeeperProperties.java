@@ -34,6 +34,32 @@ public class ZooKeeperProperties {
     private int minSessionTimeout = DFT_MIN_SESS_TO;
     private int maxSessionTimeout = DFT_MAX_SESS_TO;
 
+    public void setProperties(Properties zkProperties) throws UnknownHostException {
+        final String methodName = "setProperties(Properties)";
+        log.start(methodName);
+        setDataDir(zkProperties.getStringValue("dataDir"));
+        // Default dataLogDir with dataDir
+        setDataLogDir(zkProperties.getStringValue("dataLogDir", "dataDir"));
+        log.debug(methodName, "clientPort: " + zkProperties.getIntValue("clientPort"));
+        setClientPortAddress(zkProperties.getStringValue("clientPortAddress"), zkProperties.getIntValue("clientPort"));
+
+        log.debug(methodName,
+                  "Max Client Connections: " + zkProperties.getIntValue("maxClientCnxns", DFT_MAX_CLT_CNXNS));
+        setMaxClientCnxns(zkProperties.getIntValue("maxClientCnxns", DFT_MAX_CLT_CNXNS));
+        setTickTime(zkProperties.getIntValue("tickTime", ZooKeeperServer.DEFAULT_TICK_TIME));
+        setMinSessionTimeout(zkProperties.getIntValue("minSessionTimeout", DFT_MIN_SESS_TO));
+        setMaxSessionTimeout(zkProperties.getIntValue("maxSessionTimeout", DFT_MAX_SESS_TO));
+        log.end(methodName);
+    }
+
+
+    public ZooKeeperProperties(Properties zkProperties) throws UnknownHostException {
+        super();
+        final String methodName = "ZooKeeperProperties(Properties)";
+        log.start(methodName);
+        setProperties(zkProperties);
+        log.end(methodName);
+    }
 
     public void setDataDir(String dataDir) {
         this.dataDir = dataDir;
@@ -102,30 +128,5 @@ public class ZooKeeperProperties {
         return maxSessionTimeout;
     }
 
-    public void setProperties(Properties zkProperties) throws UnknownHostException {
-        final String methodName = "setProperties(Properties)";
-        log.start(methodName);
-        setDataDir(zkProperties.getStringValue("dataDir"));
-        // Default dataLogDir with dataDir
-        setDataLogDir(zkProperties.getStringValue("dataLogDir", "dataDir"));
-        log.debug(methodName, "clientPort: " + zkProperties.getIntValue("clientPort"));
-        setClientPortAddress(zkProperties.getStringValue("clientPortAddress"), zkProperties.getIntValue("clientPort"));
 
-        log.debug(methodName,
-                  "Max Client Connections: " + zkProperties.getIntValue("maxClientCnxns", DFT_MAX_CLT_CNXNS));
-        setMaxClientCnxns(zkProperties.getIntValue("maxClientCnxns", DFT_MAX_CLT_CNXNS));
-        setTickTime(zkProperties.getIntValue("tickTime", ZooKeeperServer.DEFAULT_TICK_TIME));
-        setMinSessionTimeout(zkProperties.getIntValue("minSessionTimeout", DFT_MIN_SESS_TO));
-        setMaxSessionTimeout(zkProperties.getIntValue("maxSessionTimeout", DFT_MAX_SESS_TO));
-        log.end(methodName);
-    }
-
-
-    public ZooKeeperProperties(Properties zkProperties) throws UnknownHostException {
-        super();
-        final String methodName = "ZooKeeperProperties(Properties)";
-        log.start(methodName);
-        setProperties(zkProperties);
-        log.end(methodName);
-    }
 }

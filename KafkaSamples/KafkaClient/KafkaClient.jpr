@@ -124,7 +124,7 @@
             <value n="javaOptions" v="-Dkafka.logs.dir=/home/oracle/jdeveloper/mywork/KafkaSamples/logs"/>
             <value n="name" v="startKafka"/>
             <value n="programArguments" v=""/>
-            <url n="targetURL" path="src/nl/darwinit/kafka/weblogic/KafkaStartupClass.java"/>
+            <url n="targetURL" path="src/nl/darwinit/kafka/weblogic/KafkaStartupShutdownTest.java"/>
          </hash>
          <hash n="startKafkaBroker">
             <value n="custom" v="false"/>
@@ -138,7 +138,7 @@
             <value n="javaOptions" v="-Dkafka.logs.dir=/home/oracle/jdeveloper/mywork/KafkaSamples/logs"/>
             <value n="name" v="startZookeeper"/>
             <value n="programArguments" v="M10_TOPIC"/>
-            <url n="targetURL" path="src/nl/darwinit/kafka/server/ZooKeeperStarter.java"/>
+            <url n="targetURL" path="src/nl/darwinit/kafka/server/ZooKeeperDriver.java"/>
          </hash>
       </hash>
       <list n="runConfigurationList">

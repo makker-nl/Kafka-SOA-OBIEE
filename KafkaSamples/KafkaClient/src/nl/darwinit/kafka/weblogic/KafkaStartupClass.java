@@ -1,54 +1,56 @@
 package nl.darwinit.kafka.weblogic;
 
+import nl.darwinit.kafka.logging.Log;
 import nl.darwinit.kafka.server.KafkaServerStarter;
-import nl.darwinit.kafka.server.ZooKeeperStarter;
 
-import org.apache.log4j.LogManager;
-import org.apache.log4j.Logger;
+
+import nl.darwinit.kafka.server.ZooKeeperDriver;
+ 
 
 public class KafkaStartupClass {
-    private static String className = KafkaStartupClass.class.getName();
-    private static Logger logger = LogManager.getLogger(className);
+    private static Log log = new Log(KafkaStartupClass.class);
+    private static final int TEN_MINUTES_IN_MS=10*60*1000;
+    private static final int FIVE_MINUTES_IN_MS=5*60*1000;
+    private static final int ONE_MINUTE_IN_MS=60*1000;
+    private static ZooKeeperDriver zooKeeperDriver;
+    
 
     public KafkaStartupClass() {
         super();
     }
 
-    public void startZookeeper() {
+    public static void startZookeeper() {
         final String methodName = "startZookeeper";
-        logStart(methodName);
-        ZooKeeperStarter zooKeeperStarter = new ZooKeeperStarter();
-        zooKeeperStarter.start();
-        logEnd(methodName);
+        log.start(methodName);
+        ZooKeeperDriver zooKeeperDriver = new ZooKeeperDriver();
+        setZooKeeperDriver(zooKeeperDriver);
+        zooKeeperDriver.start();
+        
+        log.end(methodName);
     }
 
-    public void startKafkaServer(int serverNr) {
+    public static void startKafkaServer(int serverNr) {
         final String methodName = "startKafkaServer(int) ";
-        logStart(methodName);
-        log(methodName, "Start KafkaServer " + serverNr);
+        log.start(methodName);
+        log.info(methodName, "Start KafkaServer " + serverNr);
         KafkaServerStarter kafkaServerStarter = new KafkaServerStarter();
         kafkaServerStarter.start();
-        logEnd(methodName);
+        log.end(methodName);
     }
 
-    public static void log(String methodName, String text) {
-        logger.debug(className + "." + methodName + ": " + text);
-    }
-
-    public static void logStart(String methodName) {
-        log(methodName, "Start");
-    }
-
-    public static void logEnd(String methodName) {
-        log(methodName, "End");
-    }
-
+ 
     public static void main(String[] args) {
         final String methodName = "main";
-        logStart(methodName);
-        KafkaStartupClass kafkaStartupClass = new KafkaStartupClass();
-        kafkaStartupClass.startZookeeper();
-        kafkaStartupClass.startKafkaServer(0);
-        logEnd(methodName);
+        log.start(methodName);
+        startZookeeper();
+        log.end(methodName);
+    }
+
+    public static void setZooKeeperDriver(ZooKeeperDriver zooKeeperDriver) {
+        KafkaStartupClass.zooKeeperDriver = zooKeeperDriver;
+    }
+
+    public static ZooKeeperDriver getZooKeeperDriver() {
+        return zooKeeperDriver;
     }
 }

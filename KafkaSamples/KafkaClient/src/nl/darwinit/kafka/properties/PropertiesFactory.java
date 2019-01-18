@@ -1,16 +1,14 @@
 package nl.darwinit.kafka.properties;
 
 import java.io.FileNotFoundException;
-
 import java.io.IOException;
 import java.io.InputStream;
 
 import nl.darwinit.kafka.logging.Log;
-import nl.darwinit.kafka.server.ZooKeeperStarter;
 
 
 public abstract class PropertiesFactory {
-    private static Log log = new Log(PropertiesFactory.class); 
+    private static Log log = new Log(PropertiesFactory.class);
     public static final String ZK_PROPS = "zookeeper.properties";
     public static final String DFT_KS_PROPS = "server.properties";
 
@@ -58,7 +56,7 @@ public abstract class PropertiesFactory {
      */
     public static Properties getKSProperties() throws IOException {
         final String methodName = "ZooKeeperProperties";
-        log.start(methodName);        
+        log.start(methodName);
         Properties properties = getProperties(DFT_KS_PROPS);
         log.end(methodName);
         return properties;

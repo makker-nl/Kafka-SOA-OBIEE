@@ -23,6 +23,9 @@ package nl.darwinit.kafka.server;
 import java.io.File;
 import java.io.IOException;
 
+import java.util.Observable;
+import java.util.Observer;
+
 import nl.darwinit.kafka.logging.Log;
 import nl.darwinit.kafka.properties.ZooKeeperProperties;
 
@@ -34,25 +37,30 @@ import org.apache.zookeeper.server.persistence.FileTxnSnapLog;
 /**
  * This class starts and runs a standalone ZooKeeperServer.
  */
-public class EmbeddedZookeeperServer {
+public class EmbeddedZookeeperServer implements Observer, Runnable {
     private static final Log log = new Log(EmbeddedZookeeperServer.class);
-
-
     private ServerCnxnFactory cnxnFactory;
+    private Thread myThread;
+    private ZooKeeperProperties zkProperties;
+    private ZooKeeperDriver zooKeeperDriver;
+    private ZooKeeperServer zooKeeperServer;
 
-    /*
-     * Start up the ZooKeeper server.
-     *
-     * @param args the configfile or the port datadir [ticktime]
-     */
-    public static void main(String[] args) {
-        final String methodName = "main";
-        log.start(methodName);
-        log.info(methodName, "Exiting normally");
-        log.end(methodName);
-        System.exit(0);
+    public EmbeddedZookeeperServer() {
+        super();
     }
 
+    public EmbeddedZookeeperServer(Observable zooKeeperDriver, ZooKeeperProperties zkProperties) {
+        super();
+        final String methodName="EmbeddedZookeeperServer(Observable, ZooKeeperProperties)";
+        log.start(methodName);
+        this.setZkProperties(zkProperties);
+        if (zooKeeperDriver instanceof ZooKeeperDriver) {
+            log.info(methodName, "Add observer "+this.getClass().getName()+" to observable "+zooKeeperDriver.getClass().getName());
+            setZooKeeperDriver((ZooKeeperDriver) zooKeeperDriver);
+            zooKeeperDriver.addObserver(this);
+        }
+        log.end(methodName);
+    }
 
     /**
      * Run from a ServerConfig.
@@ -76,12 +84,13 @@ public class EmbeddedZookeeperServer {
             zkServer.setTickTime(zkProperties.getTickTime());
             zkServer.setMinSessionTimeout(zkProperties.getMinSessionTimeout());
             zkServer.setMaxSessionTimeout(zkProperties.getMaxSessionTimeout());
-            
+            setZooKeeperServer(zkServer);
+
             cnxnFactory = ServerCnxnFactory.createFactory();
             log.debug(methodName, "Create Server Connection Factory");
-            log.debug(methodName, "Server Tick Time: "+zkServer.getTickTime());
-            log.debug(methodName, "ClientPortAddress: "+zkProperties.getClientPortAddress());
-            log.debug(methodName, "Max Client Connections: "+zkProperties.getMaxClientCnxns());
+            log.debug(methodName, "Server Tick Time: " + zkServer.getTickTime());
+            log.debug(methodName, "ClientPortAddress: " + zkProperties.getClientPortAddress());
+            log.debug(methodName, "Max Client Connections: " + zkProperties.getMaxClientCnxns());
             cnxnFactory.configure(zkProperties.getClientPortAddress(), zkProperties.getMaxClientCnxns());
             log.debug(methodName, "Startup Server Connection Factory");
             cnxnFactory.startup(zkServer);
@@ -104,9 +113,84 @@ public class EmbeddedZookeeperServer {
      * Shutdown the serving instance
      */
     public void shutdown() {
-        final String methodName = "runFromProperties";
+        final String methodName = "shutdown";
         log.start(methodName);
+        log.info(methodName,"Let me shutdown "+myThread.getName());
+        ZooKeeperServer zkServer = getZooKeeperServer();
+        ServerCnxnFactory cnxnFactory = getCnxnFactory();
         cnxnFactory.shutdown();
+        if (zkServer.isRunning()) {
+            zkServer.shutdown();
+        }
         log.end(methodName);
+    }
+
+    @Override
+    public void update(Observable o, Object arg) {
+        final String methodName = "update(Observable,Object)";
+        log.start(methodName);
+        log.info(methodName, getMyThread().getName() + " - Got status update from Observable!");
+        ZooKeeperDriver zkDriver = getZooKeeperDriver();
+        if (zkDriver.isShutdownZookeepers()) {
+            log.info(methodName, getMyThread().getName() + " - Apparently I´ve got to shutdown myself!");
+            shutdown();
+        } else {
+            log.info(methodName, getMyThread().getName() + " - Don't know what to do with this status update!");
+        }
+        log.end(methodName);
+    }
+
+    @Override
+    public void run() {
+        final String methodName = "run";
+        log.start(methodName);
+        try {
+            runFromProperties(getZkProperties());
+        } catch (IOException ioe) {
+            log.error(methodName, "Run failed!", ioe);
+        }
+        log.end(methodName);
+
+    }
+
+    public void setCnxnFactory(ServerCnxnFactory cnxnFactory) {
+        this.cnxnFactory = cnxnFactory;
+    }
+
+    public ServerCnxnFactory getCnxnFactory() {
+        return cnxnFactory;
+    }
+
+    public void setZkProperties(ZooKeeperProperties zkProperties) {
+        this.zkProperties = zkProperties;
+    }
+
+    public ZooKeeperProperties getZkProperties() {
+        return zkProperties;
+    }
+
+
+    public void setZooKeeperDriver(ZooKeeperDriver zooKeeperDriver) {
+        this.zooKeeperDriver = zooKeeperDriver;
+    }
+
+    public ZooKeeperDriver getZooKeeperDriver() {
+        return zooKeeperDriver;
+    }
+
+    public void setMyThread(Thread myThread) {
+        this.myThread = myThread;
+    }
+
+    public Thread getMyThread() {
+        return myThread;
+    }
+
+    public void setZooKeeperServer(ZooKeeperServer zooKeeperServer) {
+        this.zooKeeperServer = zooKeeperServer;
+    }
+
+    public ZooKeeperServer getZooKeeperServer() {
+        return zooKeeperServer;
     }
 }

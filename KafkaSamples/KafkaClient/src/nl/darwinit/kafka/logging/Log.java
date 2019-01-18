@@ -1,8 +1,5 @@
 package nl.darwinit.kafka.logging;
 
-import nl.darwinit.kafka.server.EmbeddedZookeeperServer;
-
-import nl.darwinit.kafka.server.ZooKeeperStarter;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -12,7 +9,7 @@ public class Log {
     private String className;
     private boolean toConsole = true;
 
-/**
+    /**
      * Only log to console if toConsole is true, unless override is true
      * @param logText
      * @param override
@@ -22,6 +19,7 @@ public class Log {
             System.out.println(logText);
         }
     }
+
     /**
      * Only log to console if toConsole is true;
      * @param logText
@@ -75,7 +73,7 @@ public class Log {
 
     public void error(String methodName, String text, Exception e) {
         String logText = getText(methodName, text);
-        pl(logText,true);
+        pl(logText, true);
         pl("Error Message: " + e.getMessage());
         pl("Error Caused by: " + e.getCause());
         log.error(logText, e);
