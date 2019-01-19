@@ -1,3 +1,14 @@
+/**
+ * @author Martien van den Akker, Darwin-IT Professionals
+ * @version 1.0
+ * 
+ * Used:
+ * https://stackoverflow.com/questions/9286054/is-it-possible-to-start-a-zookeeper-server-instance-in-process-say-for-unit-tes
+ * https://www.programcreek.com/java-api-examples/index.php?api=kafka.server.KafkaServer
+ * 
+ * History
+ * 2019-01-19 - 1.0 - Initial Creation
+ */
 package nl.darwinit.kafka.server;
 
 import java.io.IOException;
@@ -8,11 +19,7 @@ import nl.darwinit.kafka.logging.Log;
 import nl.darwinit.kafka.properties.PropertiesFactory;
 import nl.darwinit.kafka.properties.ZooKeeperProperties;
 
-
-/**
- * https://stackoverflow.com/questions/9286054/is-it-possible-to-start-a-zookeeper-server-instance-in-process-say-for-unit-tes
- * https://www.programcreek.com/java-api-examples/index.php?api=kafka.server.KafkaServer
- */
+ 
 public class ZooKeeperDriver extends Observable {
     private static Log log = new Log(ZooKeeperDriver.class);
     private boolean shutdownZookeepers = false;
