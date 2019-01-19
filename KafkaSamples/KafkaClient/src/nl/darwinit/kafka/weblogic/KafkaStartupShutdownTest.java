@@ -1,3 +1,13 @@
+/**
+ * @author Martien van den Akker, Darwin-IT Professionals
+ * @version 1.0
+ *
+ * Class to test the mechanism of starting up and shutting down Kafka infrastructure based upon KafkaStartupClass
+ * and KafkaShutdownClass.
+ * 
+ * History
+ * 2019-01-19 - 1.0 - Initial Creation
+ */
 package nl.darwinit.kafka.weblogic;
 
 import nl.darwinit.kafka.logging.Log;

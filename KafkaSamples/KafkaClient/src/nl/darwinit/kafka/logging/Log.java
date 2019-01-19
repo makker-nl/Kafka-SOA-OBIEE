@@ -1,3 +1,12 @@
+/**
+ * @author Martien van den Akker, Darwin-IT Professionals
+ * @version 1.0
+ *
+ * Wrapper class around logging mechanism to get confined and easy log methods.
+ * 
+ * History
+ * 2019-01-19 - 1.0 - Initial Creation
+ */
 package nl.darwinit.kafka.logging;
 
 

@@ -1,3 +1,12 @@
+/**
+ * @author Martien van den Akker, Darwin-IT Professionals
+ * @version 1.0
+ * 
+ * Factory to load property files from class path in a common way.
+ * 
+ * History
+ * 2019-01-19 - 1.0 - Initial Creation
+ */
 package nl.darwinit.kafka.properties;
 
 import java.io.FileNotFoundException;

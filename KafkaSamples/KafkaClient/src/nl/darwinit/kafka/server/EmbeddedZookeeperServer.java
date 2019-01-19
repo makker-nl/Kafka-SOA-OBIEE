@@ -2,6 +2,8 @@
  * @author Martien van den Akker, Darwin-IT Professionals
  * @version 1.0
  * 
+ * EmbeddedZookeeperServer is an Observer of the ZooKeeperDriver class, 
+ * to be able to start a ZooKeeper in a seperate thread and have it shutdown based upon an update signal.
  * This class is based on https://www.programcreek.com/java-api-examples/?code=txazo/zookeeper/zookeeper-master/src/main/java/org/apache/zookeeper/server/ZooKeeperServerMain.java.
  * Used to be able to extend and adapt it. 
  * 

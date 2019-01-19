@@ -1,5 +1,12 @@
 package nl.darwinit.kafka.properties;
-
+/**
+ * @author Martien van den Akker, Darwin-IT Professionals
+ * @version 1.0
+ *
+ * Class to parse and hold properties applicable to ZooKeeperServer.
+ * History
+ * 2019-01-19 - 1.0 - Initial Creation
+ */
 import java.net.InetAddress;
 import java.net.InetSocketAddress;
 
@@ -9,11 +16,6 @@ import nl.darwinit.kafka.logging.Log;
 
 import org.apache.zookeeper.server.ServerCnxnFactory;
 import org.apache.zookeeper.server.ZooKeeperServer;
-
-/**
- * Taken from https://www.programcreek.com/java-api-examples/?code=txazo/zookeeper/zookeeper-master/src/main/java/org/apache/zookeeper/server/ZooKeeperServerMain.java#
- * and org.apache.zookeeper.server.quorum.QuorumPeerConfig
- */
 
 
 public class ZooKeeperProperties {

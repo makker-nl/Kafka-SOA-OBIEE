@@ -1,3 +1,15 @@
+/**
+ * @author Martien van den Akker, Darwin-IT Professionals
+ * @version 1.0
+ *
+ * Shutdown class to be able to shutdown a Apache Kafka infrastructure under Weblogic, that is started
+ * from the KafkaStartupClass.
+ * See https://docs.oracle.com/middleware/1221/wls/START/overview.htm#START244 for starting up and shutting down 
+ * Weblogic servers.
+ * 
+ * History
+ * 2019-01-19 - 1.0 - Initial Creation
+ */
 package nl.darwinit.kafka.weblogic;
 
 import nl.darwinit.kafka.logging.Log;

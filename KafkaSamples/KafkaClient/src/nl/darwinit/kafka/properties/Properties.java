@@ -1,3 +1,12 @@
+/**
+ * @author Martien van den Akker, Darwin-IT Professionals
+ * @version 1.0
+ *
+ * Wrapper class around java.util.Properties to be able top get typed and/or defaulted properties.
+ * 
+ * History
+ * 2019-01-19 - 1.0 - Initial Creation
+ */
 package nl.darwinit.kafka.properties;
 
 public class Properties extends java.util.Properties {

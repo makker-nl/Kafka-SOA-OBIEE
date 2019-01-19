@@ -2,6 +2,9 @@
  * @author Martien van den Akker, Darwin-IT Professionals
  * @version 1.0
  * 
+ * Class to get a hold of ZooKeeper Server as an Observable. 
+ * To be able to have a ZooKeerp Server in a separate thread and be able to send it a shutdown signal.
+ * 
  * Used:
  * https://stackoverflow.com/questions/9286054/is-it-possible-to-start-a-zookeeper-server-instance-in-process-say-for-unit-tes
  * https://www.programcreek.com/java-api-examples/index.php?api=kafka.server.KafkaServer
