@@ -55,8 +55,8 @@ public class EmbeddedZookeeperServer implements Observer, Runnable {
     }
 
     /**
-     * Run from a ServerConfig.
-     * @param config ServerConfig to use.
+     * Run from ZooKeeperProperties.
+     * @param zkProperties ZooKeeperProperties to use.
      * @throws IOException
      */
     public void runFromProperties(ZooKeeperProperties zkProperties) throws IOException {
