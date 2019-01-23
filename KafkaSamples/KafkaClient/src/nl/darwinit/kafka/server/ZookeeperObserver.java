@@ -2,7 +2,7 @@
  * @author Martien van den Akker, Darwin-IT Professionals
  * @version 1.0
  * 
- * EmbeddedZookeeperServer is an Observer of the ZooKeeperDriver class, 
+ * ZookeeperObserver is an Observer of the ZooKeeperDriver class, 
  * to be able to start a ZooKeeper in a seperate thread and have it shutdown based upon an update signal.
  * This class is based on https://www.programcreek.com/java-api-examples/?code=txazo/zookeeper/zookeeper-master/src/main/java/org/apache/zookeeper/server/ZooKeeperServerMain.java.
  * Used to be able to extend and adapt it. 
@@ -29,21 +29,21 @@ import org.apache.zookeeper.server.persistence.FileTxnSnapLog;
 /**
  * This class starts and runs a standalone ZooKeeperServer.
  */
-public class EmbeddedZookeeperServer implements Observer, Runnable {
-    private static final Log log = new Log(EmbeddedZookeeperServer.class);
+public class ZookeeperObserver implements Observer, Runnable {
+    private static final Log log = new Log(ZookeeperObserver.class);
     private ServerCnxnFactory cnxnFactory;
     private Thread myThread;
     private ZooKeeperProperties zkProperties;
     private ZooKeeperDriver zooKeeperDriver;
     private ZooKeeperServer zooKeeperServer;
 
-    public EmbeddedZookeeperServer() {
+    public ZookeeperObserver() {
         super();
     }
 
-    public EmbeddedZookeeperServer(Observable zooKeeperDriver, ZooKeeperProperties zkProperties) {
+    public ZookeeperObserver(Observable zooKeeperDriver, ZooKeeperProperties zkProperties) {
         super();
-        final String methodName="EmbeddedZookeeperServer(Observable, ZooKeeperProperties)";
+        final String methodName="ZookeeperObserver(Observable, ZooKeeperProperties)";
         log.start(methodName);
         this.setZkProperties(zkProperties);
         if (zooKeeperDriver instanceof ZooKeeperDriver) {

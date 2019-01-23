@@ -49,7 +49,7 @@ public class ZooKeeperDriver extends Observable {
         log.start(methodName);
         try {
             ZooKeeperProperties zkProperties = PropertiesFactory.getZKProperties();
-            EmbeddedZookeeperServer zooKeeperServer = new EmbeddedZookeeperServer(this, zkProperties);
+            ZookeeperObserver zooKeeperServer = new ZookeeperObserver(this, zkProperties);
             Thread newZooKeeperThread = new Thread(zooKeeperServer);
             zooKeeperServer.setMyThread(newZooKeeperThread);
             newZooKeeperThread.start();
