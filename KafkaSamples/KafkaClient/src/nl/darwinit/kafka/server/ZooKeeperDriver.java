@@ -25,18 +25,18 @@ import nl.darwinit.kafka.properties.ZooKeeperProperties;
  
 public class ZooKeeperDriver extends Observable {
     private static Log log = new Log(ZooKeeperDriver.class);
-    private boolean shutdownZookeepers = false;
+    private boolean shutdownZooKeepers = false;
 
     public ZooKeeperDriver() {
         super();
     }
 
 
-   // Shutdown all Zookeeper
+   // Shutdown all ZooKeeper
     public void shutdown() {
         final String methodName = "shutdown";
         log.start(methodName);
-        setShutdownZookeepers(true);
+        setShutdownZooKeepers(true);
         log.info(methodName, "Notify Observers to shutdown!");
         this.setChanged();
         this.notifyObservers();
@@ -44,12 +44,12 @@ public class ZooKeeperDriver extends Observable {
     }
 
 
-    public void addZookeeper() {
-        final String methodName = "addZookeeper";
+    public void addZooKeeper() {
+        final String methodName = "addZooKeeper";
         log.start(methodName);
         try {
             ZooKeeperProperties zkProperties = PropertiesFactory.getZKProperties();
-            ZookeeperObserver zooKeeperServer = new ZookeeperObserver(this, zkProperties);
+            ZooKeeperObserver zooKeeperServer = new ZooKeeperObserver(this, zkProperties);
             Thread newZooKeeperThread = new Thread(zooKeeperServer);
             zooKeeperServer.setMyThread(newZooKeeperThread);
             newZooKeeperThread.start();
@@ -62,17 +62,17 @@ public class ZooKeeperDriver extends Observable {
     public void start() {
         final String methodName = "start";
         log.start(methodName);
-        addZookeeper();
+        addZooKeeper();
         log.end(methodName);
     }
 
 
-    public void setShutdownZookeepers(boolean shutdownZookeepers) {
-        this.shutdownZookeepers = shutdownZookeepers;
+    public void setShutdownZooKeepers(boolean shutdownZooKeepers) {
+        this.shutdownZooKeepers = shutdownZooKeepers;
     }
 
-    public boolean isShutdownZookeepers() {
-        return shutdownZookeepers;
+    public boolean isShutdownZooKeepers() {
+        return shutdownZooKeepers;
     }
 
     public static void main(String[] args) {

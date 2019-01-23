@@ -2,9 +2,9 @@
  * @author Martien van den Akker, Darwin-IT Professionals
  * @version 1.0
  * 
- * ZookeeperObserver is an Observer of the ZooKeeperDriver class, 
+ * ZooKeeperObserver is an Observer of the ZooKeeperDriver class, 
  * to be able to start a ZooKeeper in a seperate thread and have it shutdown based upon an update signal.
- * This class is based on https://www.programcreek.com/java-api-examples/?code=txazo/zookeeper/zookeeper-master/src/main/java/org/apache/zookeeper/server/ZooKeeperServerMain.java.
+ * This class is based on https://www.programcreek.com/java-api-examples/?code=txazo/ZooKeeper/ZooKeeper-master/src/main/java/org/apache/zookeeper/server/ZooKeeperServerMain.java.
  * Used to be able to extend and adapt it. 
  * 
  * History
@@ -29,21 +29,21 @@ import org.apache.zookeeper.server.persistence.FileTxnSnapLog;
 /**
  * This class starts and runs a standalone ZooKeeperServer.
  */
-public class ZookeeperObserver implements Observer, Runnable {
-    private static final Log log = new Log(ZookeeperObserver.class);
+public class ZooKeeperObserver implements Observer, Runnable {
+    private static final Log log = new Log(ZooKeeperObserver.class);
     private ServerCnxnFactory cnxnFactory;
     private Thread myThread;
     private ZooKeeperProperties zkProperties;
-    private ZooKeeperDriver zooKeeperDriver;
-    private ZooKeeperServer zooKeeperServer;
+    private ZooKeeperDriver ZooKeeperDriver;
+    private ZooKeeperServer ZooKeeperServer;
 
-    public ZookeeperObserver() {
+    public ZooKeeperObserver() {
         super();
     }
 
-    public ZookeeperObserver(Observable zooKeeperDriver, ZooKeeperProperties zkProperties) {
+    public ZooKeeperObserver(Observable zooKeeperDriver, ZooKeeperProperties zkProperties) {
         super();
-        final String methodName="ZookeeperObserver(Observable, ZooKeeperProperties)";
+        final String methodName="ZooKeeperObserver(Observable, ZooKeeperProperties)";
         log.start(methodName);
         this.setZkProperties(zkProperties);
         if (zooKeeperDriver instanceof ZooKeeperDriver) {
@@ -55,8 +55,8 @@ public class ZookeeperObserver implements Observer, Runnable {
     }
 
     /**
-     * Run from ZooKeeperProperties.
-     * @param zkProperties ZooKeeperProperties to use.
+     * Run from a ServerConfig.
+     * @param config ServerConfig to use.
      * @throws IOException
      */
     public void runFromProperties(ZooKeeperProperties zkProperties) throws IOException {
@@ -123,7 +123,7 @@ public class ZookeeperObserver implements Observer, Runnable {
         log.start(methodName);
         log.info(methodName, getMyThread().getName() + " - Got status update from Observable!");
         ZooKeeperDriver zkDriver = getZooKeeperDriver();
-        if (zkDriver.isShutdownZookeepers()) {
+        if (zkDriver.isShutdownZooKeepers()) {
             log.info(methodName, getMyThread().getName() + " - Apparently I´ve got to shutdown myself!");
             shutdown();
         } else {
@@ -162,12 +162,12 @@ public class ZookeeperObserver implements Observer, Runnable {
     }
 
 
-    public void setZooKeeperDriver(ZooKeeperDriver zooKeeperDriver) {
-        this.zooKeeperDriver = zooKeeperDriver;
+    public void setZooKeeperDriver(ZooKeeperDriver ZooKeeperDriver) {
+        this.ZooKeeperDriver = ZooKeeperDriver;
     }
 
     public ZooKeeperDriver getZooKeeperDriver() {
-        return zooKeeperDriver;
+        return ZooKeeperDriver;
     }
 
     public void setMyThread(Thread myThread) {
@@ -178,11 +178,11 @@ public class ZookeeperObserver implements Observer, Runnable {
         return myThread;
     }
 
-    public void setZooKeeperServer(ZooKeeperServer zooKeeperServer) {
-        this.zooKeeperServer = zooKeeperServer;
+    public void setZooKeeperServer(ZooKeeperServer ZooKeeperServer) {
+        this.ZooKeeperServer = ZooKeeperServer;
     }
 
     public ZooKeeperServer getZooKeeperServer() {
-        return zooKeeperServer;
+        return ZooKeeperServer;
     }
 }
