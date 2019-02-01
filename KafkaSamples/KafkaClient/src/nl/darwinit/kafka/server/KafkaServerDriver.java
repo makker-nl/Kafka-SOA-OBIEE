@@ -92,7 +92,6 @@ public class KafkaServerDriver extends Observable {
                 log.info(methodName, "Start KafkaServer " + kafkaServerName);
                 String serverPropertiesFileName = serverProperties.getStringValue("propertyfile");
                 log.debug(methodName, "KafkaServer propertyfile: " + serverPropertiesFileName);
-                String brokerId = serverProperties.getStringValue("id");
                 Properties ksProperties = null;
                 if (serverPropertiesFileName != null) {
                     ksProperties = PropertiesFactory.getKSProperties(serverPropertiesFileName);

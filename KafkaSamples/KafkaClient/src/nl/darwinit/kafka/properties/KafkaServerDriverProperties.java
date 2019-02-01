@@ -35,10 +35,8 @@ public class KafkaServerDriverProperties {
     public void setProperties(Properties ksdProperties) throws UnknownHostException {
         final String methodName = "setProperties(Properties)";
         /*
-        server0.id=0
-        server0.propertyfile=server.properties
+        server0.propertyfile=server0.properties
         server0.startupEnabled=true
-        server1.id=1
         server1.propertyfile=server1.properties
         server1.startupEnabled=true
 
@@ -49,7 +47,6 @@ public class KafkaServerDriverProperties {
         for (String kafkaServerName : kafkaServerList) {
             log.debug(methodName, "Set properties for kafkaServer: " + kafkaServerName);
             Properties serverProperties = new Properties();
-            serverProperties.put("id", ksdProperties.getStringValue(kafkaServerName + ".id"));
             serverProperties.put("propertyfile", ksdProperties.getStringValue(kafkaServerName + ".propertyfile"));
             serverProperties.put("startupEnabled", ksdProperties.getStringValue(kafkaServerName + ".startupEnabled"));
             this.addServerProperties(kafkaServerName, serverProperties);
