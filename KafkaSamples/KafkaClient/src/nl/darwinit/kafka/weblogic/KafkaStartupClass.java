@@ -12,19 +12,20 @@
 package nl.darwinit.kafka.weblogic;
 
 import nl.darwinit.kafka.logging.Log;
-import nl.darwinit.kafka.server.KafkaServerStarter;
+import nl.darwinit.kafka.server.KafkaServerDriver;
 
 
 import nl.darwinit.kafka.server.ZooKeeperDriver;
- 
+
 
 public class KafkaStartupClass {
     private static Log log = new Log(KafkaStartupClass.class);
-    private static final int TEN_MINUTES_IN_MS=10*60*1000;
-    private static final int FIVE_MINUTES_IN_MS=5*60*1000;
-    private static final int ONE_MINUTE_IN_MS=60*1000;
+    private static final int TEN_MINUTES_IN_MS = 10 * 60 * 1000;
+    private static final int FIVE_MINUTES_IN_MS = 5 * 60 * 1000;
+    private static final int ONE_MINUTE_IN_MS = 60 * 1000;
     private static ZooKeeperDriver zooKeeperDriver;
-    
+    private static KafkaServerDriver kafkaServerDriver;
+
 
     public KafkaStartupClass() {
         super();
@@ -36,24 +37,25 @@ public class KafkaStartupClass {
         ZooKeeperDriver zooKeeperDriver = new ZooKeeperDriver();
         setZooKeeperDriver(zooKeeperDriver);
         zooKeeperDriver.start();
-        
         log.end(methodName);
     }
 
-    public static void startKafkaServer(int serverNr) {
-        final String methodName = "startKafkaServer(int) ";
+    public static void startKafkaServer() {
+        final String methodName = "startKafkaServer() ";
         log.start(methodName);
-        log.info(methodName, "Start KafkaServer " + serverNr);
-        KafkaServerStarter kafkaServerStarter = new KafkaServerStarter();
-        kafkaServerStarter.start();
+        log.info(methodName, "Start KafkaServer");
+        KafkaServerDriver kafkaServerDriver = new KafkaServerDriver();
+        setKafkaServerDriver(kafkaServerDriver);
+        kafkaServerDriver.start();
         log.end(methodName);
     }
 
- 
+
     public static void main(String[] args) {
         final String methodName = "main";
         log.start(methodName);
         startZookeeper();
+        startKafkaServer();
         log.end(methodName);
     }
 
@@ -63,5 +65,13 @@ public class KafkaStartupClass {
 
     public static ZooKeeperDriver getZooKeeperDriver() {
         return zooKeeperDriver;
+    }
+
+    public static void setKafkaServerDriver(KafkaServerDriver kafkaServerDriver) {
+        KafkaStartupClass.kafkaServerDriver = kafkaServerDriver;
+    }
+
+    public static KafkaServerDriver getKafkaServerDriver() {
+        return kafkaServerDriver;
     }
 }

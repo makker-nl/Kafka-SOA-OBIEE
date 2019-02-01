@@ -22,17 +22,21 @@ import nl.darwinit.kafka.logging.Log;
 import nl.darwinit.kafka.properties.PropertiesFactory;
 import nl.darwinit.kafka.properties.ZooKeeperProperties;
 
- 
+
 public class ZooKeeperDriver extends Observable {
     private static Log log = new Log(ZooKeeperDriver.class);
     private boolean shutdownZooKeepers = false;
 
+    /**
+     * Default Constructor
+     */
     public ZooKeeperDriver() {
         super();
     }
 
-
-   // Shutdown all ZooKeeper
+    /**
+     * Shutdown all ZooKeepers
+     */
     public void shutdown() {
         final String methodName = "shutdown";
         log.start(methodName);
@@ -43,7 +47,9 @@ public class ZooKeeperDriver extends Observable {
         log.end(methodName);
     }
 
-
+    /**
+     * Add ZooKeeper
+     */
     public void addZooKeeper() {
         final String methodName = "addZooKeeper";
         log.start(methodName);
@@ -51,7 +57,8 @@ public class ZooKeeperDriver extends Observable {
             ZooKeeperProperties zkProperties = PropertiesFactory.getZKProperties();
             ZooKeeperObserver zooKeeperServer = new ZooKeeperObserver(this, zkProperties);
             Thread newZooKeeperThread = new Thread(zooKeeperServer);
-            zooKeeperServer.setMyThread(newZooKeeperThread);
+            newZooKeeperThread.setName("ZooKeeper");
+            zooKeeperServer.setZkThread(newZooKeeperThread);
             newZooKeeperThread.start();
         } catch (IOException e) {
             log.error(methodName, "ZooKeeper Failed", e);
@@ -59,6 +66,9 @@ public class ZooKeeperDriver extends Observable {
         log.end(methodName);
     }
 
+    /**
+     * Start ZooKeeper(s)
+     */
     public void start() {
         final String methodName = "start";
         log.start(methodName);
@@ -66,6 +76,17 @@ public class ZooKeeperDriver extends Observable {
         log.end(methodName);
     }
 
+    /**
+     * main
+     * @param args
+     */
+    public static void main(String[] args) {
+        final String methodName = "main";
+        log.start(methodName);
+        ZooKeeperDriver zooKeeperDriver = new ZooKeeperDriver();
+        zooKeeperDriver.start();
+        log.end(methodName);
+    }
 
     public void setShutdownZooKeepers(boolean shutdownZooKeepers) {
         this.shutdownZooKeepers = shutdownZooKeepers;
@@ -73,13 +94,5 @@ public class ZooKeeperDriver extends Observable {
 
     public boolean isShutdownZooKeepers() {
         return shutdownZooKeepers;
-    }
-
-    public static void main(String[] args) {
-        final String methodName = "main";
-        log.start(methodName);
-        ZooKeeperDriver zooKeeperDriver = new ZooKeeperDriver();
-        zooKeeperDriver.start();
-        log.end(methodName);
     }
 }

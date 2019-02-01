@@ -33,7 +33,7 @@ public class KafkaStartupShutdownTest {
         KafkaStartupClass.main(args);       
         try {
             log.info(methodName,"Going into sleep...");
-            Thread.sleep(ONE_MINUTE_IN_MS);
+            Thread.sleep(TEN_MINUTES_IN_MS);
         } catch (InterruptedException e) {
             log.error(methodName, "Failed to sleep...", e);
         }

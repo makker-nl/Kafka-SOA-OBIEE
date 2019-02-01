@@ -88,6 +88,11 @@
                   <url protocol="file" path="/app/opensource/confluent/etc/kafka/"/>
                </list>
             </hash>
+            <hash>
+               <list n="url-path">
+                  <url path="config/"/>
+               </list>
+            </hash>
          </list>
          <list n="url-path"/>
       </hash>
@@ -119,19 +124,28 @@
             <value n="programArguments" v="M10_TOPIC"/>
             <value n="targetURL"/>
          </hash>
+         <hash n="simpleProducer">
+            <value n="custom" v="false"/>
+            <value n="javaOptions" v=""/>
+            <value n="name" v="simpleProducer"/>
+            <value n="programArguments" v="M10_TOPIC"/>
+            <value n="runActiveFile" v="false"/>
+            <url n="targetURL" path="src/nl/darwinit/kafka/client/SimpleProducer.java"/>
+         </hash>
          <hash n="startKafka">
             <value n="custom" v="false"/>
             <value n="javaOptions" v="-Dkafka.logs.dir=/home/oracle/jdeveloper/mywork/KafkaSamples/logs"/>
             <value n="name" v="startKafka"/>
             <value n="programArguments" v=""/>
+            <value n="runActiveFile" v="false"/>
             <url n="targetURL" path="src/nl/darwinit/kafka/weblogic/KafkaStartupShutdownTest.java"/>
          </hash>
-         <hash n="startKafkaBroker">
+         <hash n="startKafkaServerDriver">
             <value n="custom" v="false"/>
             <value n="javaOptions" v="-Dkafka.logs.dir=/home/oracle/jdeveloper/mywork/KafkaSamples/logs"/>
-            <value n="name" v="startKafkaBroker"/>
-            <value n="programArguments" v="M10_TOPIC"/>
-            <url n="targetURL" path="src/nl/darwinit/kafka/server/KafkaServerStarter.java"/>
+            <value n="name" v="startKafkaServerDriver"/>
+            <value n="programArguments" v=""/>
+            <url n="targetURL" path="src/nl/darwinit/kafka/server/KafkaServerDriver.java"/>
          </hash>
          <hash n="startZookeeper">
             <value n="custom" v="false"/>
@@ -143,8 +157,9 @@
       </hash>
       <list n="runConfigurationList">
          <string v="Default"/>
+         <string v="simpleProducer"/>
          <string v="startKafka"/>
-         <string v="startKafkaBroker"/>
+         <string v="startKafkaServerDriver"/>
          <string v="startZookeeper"/>
       </list>
    </hash>
@@ -208,6 +223,10 @@
          </hash>
          <hash>
             <value n="id" v="Jackson-annotations-2.9.6.jar"/>
+            <value n="isJDK" v="false"/>
+         </hash>
+         <hash>
+            <value n="id" v="Config"/>
             <value n="isJDK" v="false"/>
          </hash>
       </list>
@@ -348,6 +367,15 @@
                <value n="id" v="Jackson-annotations-2.9.6.jar"/>
                <value n="locked" v="true"/>
             </hash>
+            <hash>
+               <list n="classPath">
+                  <url path="config/"/>
+               </list>
+               <value n="deployedByDefault" v="true"/>
+               <value n="description" v="Config"/>
+               <value n="id" v="Config"/>
+               <value n="locked" v="true"/>
+            </hash>
          </list>
       </hash>
       <list n="libraryReferences">
@@ -409,6 +437,10 @@
          </hash>
          <hash>
             <value n="id" v="Jackson-annotations-2.9.6.jar"/>
+            <value n="isJDK" v="false"/>
+         </hash>
+         <hash>
+            <value n="id" v="Config"/>
             <value n="isJDK" v="false"/>
          </hash>
       </list>

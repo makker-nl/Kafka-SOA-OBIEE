@@ -20,6 +20,7 @@ public abstract class PropertiesFactory {
     private static Log log = new Log(PropertiesFactory.class);
     public static final String ZK_PROPS = "zookeeper.properties";
     public static final String DFT_KS_PROPS = "server.properties";
+    public static final String KSD_PROPS = "kafkaserverdriver.properties";
 
     /**
      * GetProperties to load a property file from classpath
@@ -50,7 +51,7 @@ public abstract class PropertiesFactory {
      * @throws IOException
      */
     public static ZooKeeperProperties getZKProperties() throws IOException {
-        final String methodName = "ZooKeeperProperties";
+        final String methodName = "getZKProperties";
         log.start(methodName);
         Properties properties = getProperties(ZK_PROPS);
         ZooKeeperProperties zkProperties = new ZooKeeperProperties(properties);
@@ -58,17 +59,46 @@ public abstract class PropertiesFactory {
         return zkProperties;
     }
 
+     /**
+     * Get Default Kafka Server properties based on ServerName
+     * @param propFileName
+     * @return
+     * @throws IOException
+     */
+    public static Properties getKSProperties(String propFileName) throws IOException {
+        final String methodName = "getKSProperties";
+        log.start(methodName);
+        Properties ksProperties = getProperties(propFileName);        
+        log.end(methodName);
+        return ksProperties;
+    }
+    
     /**
      * Get Default Kafka Server properties
      * @return
      * @throws IOException
      */
     public static Properties getKSProperties() throws IOException {
-        final String methodName = "ZooKeeperProperties";
+        final String methodName = "getKSProperties()";
         log.start(methodName);
-        Properties properties = getProperties(DFT_KS_PROPS);
+        Properties ksProperties = getKSProperties(DFT_KS_PROPS);        
         log.end(methodName);
-        return properties;
+        return ksProperties;
     }
-
+    
+    /**
+     * Get Default Kafka Cluster properties
+     * @return
+     * @throws IOException
+     */
+    public static KafkaServerDriverProperties getKSDProperties() throws IOException {
+        final String methodName = "getKSDProperties";
+        log.start(methodName);
+        Properties properties = getProperties(KSD_PROPS);
+        KafkaServerDriverProperties ksdProperties = new KafkaServerDriverProperties(properties);
+        log.end(methodName);
+        return ksdProperties;
+    }
+    
+        
 }

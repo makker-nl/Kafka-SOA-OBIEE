@@ -32,7 +32,7 @@ import org.apache.zookeeper.server.persistence.FileTxnSnapLog;
 public class ZooKeeperObserver implements Observer, Runnable {
     private static final Log log = new Log(ZooKeeperObserver.class);
     private ServerCnxnFactory cnxnFactory;
-    private Thread myThread;
+    private Thread zkThread;
     private ZooKeeperProperties zkProperties;
     private ZooKeeperDriver ZooKeeperDriver;
     private ZooKeeperServer ZooKeeperServer;
@@ -107,7 +107,7 @@ public class ZooKeeperObserver implements Observer, Runnable {
     public void shutdown() {
         final String methodName = "shutdown";
         log.start(methodName);
-        log.info(methodName,"Let me shutdown "+myThread.getName());
+        log.info(methodName,"Let me shutdown "+zkThread.getName());
         ZooKeeperServer zkServer = getZooKeeperServer();
         ServerCnxnFactory cnxnFactory = getCnxnFactory();
         cnxnFactory.shutdown();
@@ -121,13 +121,13 @@ public class ZooKeeperObserver implements Observer, Runnable {
     public void update(Observable o, Object arg) {
         final String methodName = "update(Observable,Object)";
         log.start(methodName);
-        log.info(methodName, getMyThread().getName() + " - Got status update from Observable!");
+        log.info(methodName, getZkThread().getName() + " - Got status update from Observable!");
         ZooKeeperDriver zkDriver = getZooKeeperDriver();
         if (zkDriver.isShutdownZooKeepers()) {
-            log.info(methodName, getMyThread().getName() + " - Apparently I´ve got to shutdown myself!");
+            log.info(methodName, getZkThread().getName() + " - Apparently I´ve got to shutdown myself!");
             shutdown();
         } else {
-            log.info(methodName, getMyThread().getName() + " - Don't know what to do with this status update!");
+            log.info(methodName, getZkThread().getName() + " - Don't know what to do with this status update!");
         }
         log.end(methodName);
     }
@@ -170,12 +170,12 @@ public class ZooKeeperObserver implements Observer, Runnable {
         return ZooKeeperDriver;
     }
 
-    public void setMyThread(Thread myThread) {
-        this.myThread = myThread;
+    public void setZkThread(Thread myThread) {
+        this.zkThread = myThread;
     }
 
-    public Thread getMyThread() {
-        return myThread;
+    public Thread getZkThread() {
+        return zkThread;
     }
 
     public void setZooKeeperServer(ZooKeeperServer ZooKeeperServer) {
